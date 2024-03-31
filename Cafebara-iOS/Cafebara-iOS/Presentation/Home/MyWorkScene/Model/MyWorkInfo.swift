@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct MyWorkInfo {
+struct MyWorkInfo: Codable {
     let date: String
     let workKeyword: String
     let workKeywordTextColor: String

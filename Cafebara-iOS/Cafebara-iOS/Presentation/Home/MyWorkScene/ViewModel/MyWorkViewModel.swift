@@ -7,9 +7,9 @@
 
 import UIKit
 
+import Moya
 import RxSwift
 import RxRelay
-import Moya
 
 protocol MyWorkViewModelInputs {
     func saveReplaceWorkerIndexPath(indexPath: IndexPath)

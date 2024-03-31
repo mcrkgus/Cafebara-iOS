@@ -7,9 +7,9 @@
 
 import UIKit
 
-import RxSwift
 import RxCocoa
 import RxGesture
+import RxSwift
 
 final class AskReplacementViewController: UIViewController {
     
@@ -43,6 +43,7 @@ final class AskReplacementViewController: UIViewController {
         setUI()
         bindViewModel()
         setDelegate()
+        setGesture()
     }
 }
 
@@ -61,17 +62,20 @@ extension AskReplacementViewController {
     func bindViewModel() {
         viewModel.outputs.myWorkInfoData
             .bind { [weak self] data in
-                self?.askReplacementView.configureView(data: data)
+                guard let self = self else { return }
+                self.askReplacementView.configureView(data: data)
             }
             .disposed(by: disposeBag)
         viewModel.outputs.workerNameData
             .bind { [weak self] data in
-                self?.askReplacementView.configureView(nameData: data)
+                guard let self = self else { return }
+                self.askReplacementView.configureView(nameData: data)
             }
             .disposed(by: disposeBag)
         viewModel.outputs.alertTitle
             .bind { [weak self] title, name in
-                self?.askReplacementView.alertview.configureView(title: title, name: name)
+                guard let self = self else { return }
+                self.askReplacementView.alertview.configureView(title: title, name: name)
             }
             .disposed(by: disposeBag)
     }
@@ -79,10 +83,13 @@ extension AskReplacementViewController {
     func setDelegate() {
         askReplacementView.nameDropDownView.delegate = self
         askReplacementView.alertview.delegate = self
-        
+    }
+    
+    func setGesture() {
         askReplacementView.askButton.rx.tap
             .bind { [weak self] _ in
-                self?.askReplacementView.alertview.isHidden = false
+                guard let self = self else { return }
+                self.askReplacementView.alertview.isHidden = false
             }
             .disposed(by: disposeBag)
     }

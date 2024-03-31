@@ -7,8 +7,8 @@
 
 import UIKit
 
-import RxSwift
 import RxCocoa
+import RxSwift
 
 final class MyWorkViewController: UIViewController {
     
@@ -32,7 +32,7 @@ final class MyWorkViewController: UIViewController {
         
         setUI()
         bindViewModel()
-        setDelegate()
+        setGesture()
     }
 }
 
@@ -52,12 +52,13 @@ extension MyWorkViewController {
         viewModel.outputs.myWorkInfoData
             .observe(on: MainScheduler.instance)
             .subscribe(onNext: { [weak self] data in
-                self?.myWorkView.configureView(data: data)
+                guard let self = self else { return }
+                self.myWorkView.configureView(data: data)
             })
             .disposed(by: disposeBag)
     }
     
-    func setDelegate() {
+    func setGesture() {
         myWorkView.askButton.rx.tap
             .bind {
                 self.navigationController?.pushViewController(AskReplacementViewController(viewModel: self.viewModel), animated: true)

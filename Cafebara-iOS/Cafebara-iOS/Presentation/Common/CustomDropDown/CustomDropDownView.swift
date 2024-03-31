@@ -7,11 +7,11 @@
 
 import UIKit
 
-import SnapKit
-import Then
-import RxSwift
 import RxCocoa
 import RxGesture
+import RxSwift
+import SnapKit
+import Then
 
 @frozen
 enum DropDownType {
@@ -47,6 +47,7 @@ final class CustomDropDownView: UIView {
     
     var delegate: DropDownTappedDelegate?
     private let disposeBag = DisposeBag()
+    private var dropDownType: DropDownType
     
     // MARK: - UI Components
     
@@ -100,6 +101,7 @@ final class CustomDropDownView: UIView {
     
     var dataSource = [String]() {
         didSet {
+            setViewHeight(cellCount: dataSource.count)
             dropDownTableView.reloadData()
         }
     }
@@ -107,14 +109,16 @@ final class CustomDropDownView: UIView {
     // MARK: - Life Cycles
 
     init(type: DropDownType) {
+        dropDownType = type
         super.init(frame: .zero)
         
         setUI()
-        setStyle(type: type)
+        setStyle()
         setHierarchy()
-        setLayout(type: type)
+        setLayout()
         setRegisterCell()
         setDelegate()
+        setDropDownView()
     }
     
     @available(*, unavailable)
@@ -131,7 +135,7 @@ private extension CustomDropDownView {
         backgroundColor = .clear
     }
     
-    func setStyle(type: DropDownType) {
+    func setStyle() {
         selectedView.do {
             $0.backgroundColor = .whiteBara
         }
@@ -146,7 +150,7 @@ private extension CustomDropDownView {
         
         dropDownTableView.do {
             $0.isHidden = true
-            $0.rowHeight = type.cellHeight
+            $0.rowHeight = dropDownType.cellHeight
             $0.separatorStyle = .none
         }
     }
@@ -159,15 +163,15 @@ private extension CustomDropDownView {
                                  dropDownImageView)
     }
     
-    func setLayout(type: DropDownType) {
+    func setLayout() {
         self.snp.makeConstraints {
-            $0.height.equalTo(type.cellHeight + 144)
-            $0.width.equalTo(type.dropDownWidth)
+            $0.height.equalTo(dropDownType.cellHeight + 144)
+            $0.width.equalTo(dropDownType.dropDownWidth)
         }
         
         selectedView.snp.makeConstraints {
             $0.top.leading.trailing.equalToSuperview()
-            $0.height.equalTo(type.cellHeight)
+            $0.height.equalTo(dropDownType.cellHeight)
         }
         
         dropDownTableView.snp.makeConstraints {
@@ -192,13 +196,24 @@ private extension CustomDropDownView {
         }
     }
     
+    func setViewHeight(cellCount: Int) {
+        let viewHeight = CGFloat(Int(dropDownType.cellHeight) * (cellCount + 1) + 4)
+        self.snp.updateConstraints {
+            $0.height.equalTo(min(viewHeight, dropDownType.cellHeight + 144))
+            $0.width.equalTo(dropDownType.dropDownWidth)
+        }
+    }
+    
     func setRegisterCell() {
-        dropDownTableView.dataSource = self
-        dropDownTableView.delegate = self
-        dropDownTableView.register(CustomDropDownTableViewCell.self, forCellReuseIdentifier: "CustomDropDownTableViewCell")
+        CustomDropDownTableViewCell.register(target: dropDownTableView)
     }
     
     func setDelegate() {
+        dropDownTableView.dataSource = self
+        dropDownTableView.delegate = self
+    }
+    
+    func setDropDownView() {
         selectedView.rx.tapGesture()
             .when(.recognized)
             .bind { [weak self] _ in
@@ -209,12 +224,12 @@ private extension CustomDropDownView {
                 self.dropDownTableView.isHidden = !self.isVisibleDropDown
                 self.dropDownImageView.image = self.isVisibleDropDown ? UIImage(resource: .icDropboxUp) : UIImage(resource: .icDropboxDown)
             }
-            
             .disposed(by: disposeBag)
         
         dropDownTableView.rx.itemSelected
             .bind { [weak self] indexPath in
                 guard let self = self else { return }
+                
                 let cell = self.dropDownTableView.cellForRow(at: indexPath) as? CustomDropDownTableViewCell
                 cell?.dropDownItemLabel.textColor = .blueBara
                 cell?.backgroundColor = .blue10
@@ -233,8 +248,10 @@ private extension CustomDropDownView {
         
         dropDownTableView.rx.itemDeselected
             .bind { [weak self] indexPath in
-                let cell = self?.dropDownTableView.cellForRow(at: indexPath) as? CustomDropDownTableViewCell
-                cell?.dropDownItemLabel.textColor = self?.selectedItemTextColor
+                guard let self = self else { return }
+                
+                let cell = self.dropDownTableView.cellForRow(at: indexPath) as? CustomDropDownTableViewCell
+                cell?.dropDownItemLabel.textColor = self.selectedItemTextColor
                 cell?.backgroundColor = .whiteBara
             }
             .disposed(by: disposeBag)
@@ -247,7 +264,7 @@ extension CustomDropDownView: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "CustomDropDownTableViewCell", for: indexPath) as? CustomDropDownTableViewCell else { return UITableViewCell() }
+        let cell = CustomDropDownTableViewCell.dequeueReusableCell(tableView: dropDownTableView, indexPath: indexPath)
         
         cell.dropDownItemLabel.text = dataSource[indexPath.row]
         cell.dropDownItemLabel.font = font
