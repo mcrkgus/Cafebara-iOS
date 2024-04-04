@@ -33,6 +33,7 @@ final class MissionViewController: UIViewController {
         
         setUI()
         bindViewModel()
+        setGesture()
     }
 }
 
@@ -62,6 +63,15 @@ extension MissionViewController {
         
         viewModel.outputs.staffMissionInfo
             .bind(to: missionView.staffMissionCollectionView.rx.items(dataSource: dataSource))
+            .disposed(by: disposeBag)
+    }
+    
+    func setGesture() {
+        missionView.routineButton.rx.tap
+            .bind { [weak self] _ in
+                guard let self = self else { return }
+                self.missionView.setHiddenRoutineInfo()
+            }
             .disposed(by: disposeBag)
     }
 }

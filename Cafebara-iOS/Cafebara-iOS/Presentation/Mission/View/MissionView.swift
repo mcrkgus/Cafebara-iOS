@@ -128,3 +128,12 @@ private extension MissionView {
         StaffMissionCollectionViewCell.register(target: staffMissionCollectionView)
     }
 }
+
+extension MissionView {
+    
+    func setHiddenRoutineInfo() {
+        routineImageView.isHidden = true
+        routineLabel.isHidden = true
+        routineButton.isHidden = true
+    }
+}
