@@ -22,6 +22,7 @@ enum I18N {
         static let tabBarSchedule = "스케줄"
         static let tabBarWork = "출퇴근"
         static let tabBarMyPage = "마이페이지"
+        static let tabBarMission = "미션"
     }
     
     enum OnboardingRegister {
@@ -57,5 +58,11 @@ enum I18N {
         static let askReplacementNavigationTitle = "대타 요청"
         static let askReplacementButtonTitle = "요청 보내기"
         static let addAlertTitle = " 님께\n대타 요청을 보내실 건가요?"
+    }
+    
+    enum Mission {
+        static let missionNavigationTitle = "미션"
+        static let routineTitle = "반복되는 루틴을 추가해 보세요!"
+        static let swungDash = "~"
     }
 }
