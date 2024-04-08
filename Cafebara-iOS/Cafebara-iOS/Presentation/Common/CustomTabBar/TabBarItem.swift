@@ -10,14 +10,14 @@ import UIKit
 enum TabBarItem: CaseIterable {
     
     case home, todo, schedule, work, mypage
-
+    
     // 선택되지 않은 탭
     var normalItem: UIImage? {
         switch self {
         case .home:
             return .icHomeInactive
         case .todo:
-            return .icTodoInactive
+            return UserDefaults.standard.bool(forKey: "isOwner") ? .icMissionInactive : .icTodoInactive
         case .schedule:
             return .icCalenderInactive
         case .work:
@@ -33,7 +33,7 @@ enum TabBarItem: CaseIterable {
         case .home:
             return .icHomeActive
         case .todo:
-            return .icTodoActive
+            return UserDefaults.standard.bool(forKey: "isOwner") ? .icMissionActive : .icTodoActive
         case .schedule:
             return .icCalenderActive
         case .work:
@@ -46,22 +46,32 @@ enum TabBarItem: CaseIterable {
     // 탭 별 제목
     var itemTitle: String? {
         switch self {
-        case .home: return I18N.Common.tabBarhome
-        case .todo: return I18N.Common.tabBarToDo
-        case .schedule: return I18N.Common.tabBarSchedule
-        case .work: return I18N.Common.tabBarWork
-        case .mypage: return I18N.Common.tabBarMyPage
+        case .home: 
+            return I18N.Common.tabBarhome
+        case .todo:
+            return UserDefaults.standard.bool(forKey: "isOwner") ? I18N.Common.tabBarMission : I18N.Common.tabBarToDo
+        case .schedule:
+            return I18N.Common.tabBarSchedule
+        case .work: 
+            return I18N.Common.tabBarWork
+        case .mypage: 
+            return I18N.Common.tabBarMyPage
         }
     }
     
     // 탭 별 전환될 화면 -> 나중에 하나씩 추가
     var targetViewController: UIViewController {
         switch self {
-        case .home: return ViewController()
-        case .todo: return ViewController() // TodoViewController()
-        case .schedule: return ViewController() // ScheduleViewController()
-        case .work: return ViewController() // WorkViewController()
-        case .mypage: return ViewController() // MyPageViewController()
+        case .home: 
+            return MyWorkViewController()
+        case .todo:
+            return UserDefaults.standard.bool(forKey: "isOwner") ? MissionViewController() : ViewController()
+        case .schedule:
+            return ViewController() // ScheduleViewController()
+        case .work: 
+            return ViewController() // WorkViewController()
+        case .mypage: 
+            return ViewController() // MyPageViewController()
         }
     }
 }
