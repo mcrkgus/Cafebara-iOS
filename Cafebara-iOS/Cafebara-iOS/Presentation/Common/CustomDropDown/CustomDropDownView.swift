@@ -106,6 +106,12 @@ final class CustomDropDownView: UIView {
         }
     }
     
+    var isFirstSelected: Bool = false {
+        didSet {
+            firstSelected()
+        }
+    }
+    
     // MARK: - Life Cycles
 
     init(type: DropDownType) {
@@ -213,6 +219,18 @@ private extension CustomDropDownView {
         dropDownTableView.delegate = self
     }
     
+    func firstSelected() {
+        let initialSelectedIndexPath = IndexPath(row: 0, section: 0)
+        dropDownTableView.selectRow(at: initialSelectedIndexPath, animated: false, scrollPosition: .none)
+        
+        let initialSelectedCell = dropDownTableView.cellForRow(at: initialSelectedIndexPath) as? CustomDropDownTableViewCell
+        initialSelectedCell?.dropDownItemLabel.textColor = .blueBara
+        initialSelectedCell?.backgroundColor = .blue10
+        selectedItemLabel.text = dataSource[initialSelectedIndexPath.row]
+        placeholderLabel.isHidden = true
+        selectedItemLabel.isHidden = false
+    }
+    
     func setDropDownView() {
         selectedView.rx.tapGesture()
             .when(.recognized)
@@ -251,7 +269,7 @@ private extension CustomDropDownView {
                 guard let self = self else { return }
                 
                 let cell = self.dropDownTableView.cellForRow(at: indexPath) as? CustomDropDownTableViewCell
-                cell?.dropDownItemLabel.textColor = self.selectedItemTextColor
+                cell?.dropDownItemLabel.textColor = .gray7
                 cell?.backgroundColor = .whiteBara
             }
             .disposed(by: disposeBag)
