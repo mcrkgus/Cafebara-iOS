@@ -15,7 +15,7 @@ struct StaffMissionInfo: Codable {
     let workKeywordTextColor: String
     let workKeywordBackColor: String
     let startTime: String
-    let endTiem: String
+    let endTime: String
 }
 
 struct SectionOfStaffMission {

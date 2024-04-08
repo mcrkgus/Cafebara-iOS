@@ -40,16 +40,16 @@ final class MissionViewModel: MissionViewModelInputs, MissionViewModelOutputs, M
     
     init() {
         var staffMissionDTO: [StaffMissionInfo] = [
-            StaffMissionInfo(name: "강민수", workKeyword: "오픈", workKeywordTextColor: "#FF4F4F", workKeywordBackColor: "#FFF3F3", startTime: "9:00", endTiem: "13:00"),
-            StaffMissionInfo(name: "고아라", workKeyword: "오픈", workKeywordTextColor: "#FF4F4F", workKeywordBackColor: "#FFF3F3", startTime: "9:00", endTiem: "13:00"),
-            StaffMissionInfo(name: "방민지", workKeyword: "미들", workKeywordTextColor: "#7827C9", workKeywordBackColor: "#F6F1FD", startTime: "12:00", endTiem: "16:00"),
-            StaffMissionInfo(name: "김가현", workKeyword: "미들2", workKeywordTextColor: "#1F9BB6", workKeywordBackColor: "#EAFBFA", startTime: "14:00", endTiem: "18:00"),
-            StaffMissionInfo(name: "김보연", workKeyword: "마감", workKeywordTextColor: "#6CB731", workKeywordBackColor: "#F6FEF3", startTime: "18:00", endTiem: "24:00"),
-            StaffMissionInfo(name: "강민수", workKeyword: "오픈", workKeywordTextColor: "#FF4F4F", workKeywordBackColor: "#FFF3F3", startTime: "9:00", endTiem: "13:00"),
-            StaffMissionInfo(name: "고아라", workKeyword: "오픈", workKeywordTextColor: "#FF4F4F", workKeywordBackColor: "#FFF3F3", startTime: "9:00", endTiem: "13:00"),
-            StaffMissionInfo(name: "방민지", workKeyword: "미들", workKeywordTextColor: "#7827C9", workKeywordBackColor: "#F6F1FD", startTime: "12:00", endTiem: "16:00"),
-            StaffMissionInfo(name: "김가현", workKeyword: "미들2", workKeywordTextColor: "#1F9BB6", workKeywordBackColor: "#EAFBFA", startTime: "14:00", endTiem: "18:00"),
-            StaffMissionInfo(name: "김보연", workKeyword: "마감", workKeywordTextColor: "#6CB731", workKeywordBackColor: "#F6FEF3", startTime: "18:00", endTiem: "24:00")
+            StaffMissionInfo(name: "강민수", workKeyword: "오픈", workKeywordTextColor: "#FF4F4F", workKeywordBackColor: "#FFF3F3", startTime: "9:00", endTime: "13:00"),
+            StaffMissionInfo(name: "고아라", workKeyword: "오픈", workKeywordTextColor: "#FF4F4F", workKeywordBackColor: "#FFF3F3", startTime: "9:00", endTime: "13:00"),
+            StaffMissionInfo(name: "방민지", workKeyword: "미들", workKeywordTextColor: "#7827C9", workKeywordBackColor: "#F6F1FD", startTime: "12:00", endTime: "16:00"),
+            StaffMissionInfo(name: "김가현", workKeyword: "미들2", workKeywordTextColor: "#1F9BB6", workKeywordBackColor: "#EAFBFA", startTime: "14:00", endTime: "18:00"),
+            StaffMissionInfo(name: "김보연", workKeyword: "마감", workKeywordTextColor: "#6CB731", workKeywordBackColor: "#F6FEF3", startTime: "18:00", endTime: "24:00"),
+            StaffMissionInfo(name: "강민수", workKeyword: "오픈", workKeywordTextColor: "#FF4F4F", workKeywordBackColor: "#FFF3F3", startTime: "9:00", endTime: "13:00"),
+            StaffMissionInfo(name: "고아라", workKeyword: "오픈", workKeywordTextColor: "#FF4F4F", workKeywordBackColor: "#FFF3F3", startTime: "9:00", endTime: "13:00"),
+            StaffMissionInfo(name: "방민지", workKeyword: "미들", workKeywordTextColor: "#7827C9", workKeywordBackColor: "#F6F1FD", startTime: "12:00", endTime: "16:00"),
+            StaffMissionInfo(name: "김가현", workKeyword: "미들2", workKeywordTextColor: "#1F9BB6", workKeywordBackColor: "#EAFBFA", startTime: "14:00", endTime: "18:00"),
+            StaffMissionInfo(name: "김보연", workKeyword: "마감", workKeywordTextColor: "#6CB731", workKeywordBackColor: "#F6FEF3", startTime: "18:00", endTime: "24:00")
         ]
         staffMissionInfo.onNext([SectionOfStaffMission(header: getCurrentDate(), items: staffMissionDTO)])
     }

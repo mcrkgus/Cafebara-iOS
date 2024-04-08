@@ -54,7 +54,7 @@ final class MyWorkViewModel: MyWorkViewModelInputs, MyWorkViewModelOutputs, MyWo
         workKeywordTextColor: "",
         workKeywordBackColor: "",
         startTime: "",
-        endTiem: "",
+        endTime: "",
         name: ""
     ))
     
@@ -69,7 +69,7 @@ final class MyWorkViewModel: MyWorkViewModelInputs, MyWorkViewModelOutputs, MyWo
             workKeywordTextColor: "#1F9BB6",
             workKeywordBackColor: "#EAFBFA",
             startTime: "9:00",
-            endTiem: "13:00",
+            endTime: "13:00",
             name: "강민수")
         myWorkInfoData.onNext(myWorkInfo)
         

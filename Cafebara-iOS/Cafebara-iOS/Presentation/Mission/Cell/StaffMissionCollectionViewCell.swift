@@ -175,6 +175,6 @@ extension StaffMissionCollectionViewCell {
         workKeywordLabel.textColor = UIColor(hex: data.workKeywordTextColor)
         workKeywordLabel.backgroundColor = UIColor(hex: data.workKeywordBackColor)
         workStartTimeLabel.text = data.startTime
-        workEndTimeLabel.text = data.endTiem
+        workEndTimeLabel.text = data.endTime
     }
 }

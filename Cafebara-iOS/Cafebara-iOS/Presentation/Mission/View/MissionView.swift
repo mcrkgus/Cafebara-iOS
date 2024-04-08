@@ -12,8 +12,6 @@ import Then
 
 final class MissionView: UIView {
     
-    // MARK: - Properties
-    
     // MARK: - UI Components
     
     let navigationBar = CustomNavigationView()
