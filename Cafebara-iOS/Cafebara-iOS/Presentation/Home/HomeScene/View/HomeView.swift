@@ -65,7 +65,7 @@ private extension HomeView {
         navigationBar.do {
             $0.isMenuButtonIncluded = true
             $0.isAlarmButtonIncluded = true
-            $0.titleLabelText = "홈"
+            $0.titleLabelText = I18N.Home.homeNavigationBarTitle
             $0.isTitleLabelIncluded = true
         }
         
@@ -114,14 +114,14 @@ private extension HomeView {
         }
         
         noticeTitle.do {
-            $0.text = "공지사항"
+            $0.text = I18N.Home.noticeTitle
             $0.textColor = .gray7
             $0.font = .fontBara(.title3)
             $0.asLineHeight(.title3)
         }
         
         noticeMoreButton.do {
-            $0.setTitle("더보기", for: .normal)
+            $0.setTitle(I18N.Home.noticeMoreButtonTitle, for: .normal)
             $0.setTitleColor(.gray3, for: .normal)
             $0.titleLabel?.font = .fontBara(.caption2)
             $0.titleLabel?.asLineHeight(.caption2)
@@ -140,7 +140,7 @@ private extension HomeView {
         }
         
         todoTitle.do {
-            $0.text = "오늘의 할 일"
+            $0.text = I18N.Home.todoTitle
             $0.textColor = .gray7
             $0.font = .fontBara(.title3)
             $0.asLineHeight(.title3)
@@ -159,7 +159,7 @@ private extension HomeView {
         }
         
         todoCheckButton.do {
-            $0.setTitle("바로 확인하기", for: .normal)
+            $0.setTitle(I18N.Home.todoCheckButtonTitle, for: .normal)
             $0.setTitleColor(.orangeBara, for: .normal)
             $0.setTitleColor(.gray2, for: .disabled)
             $0.titleLabel?.font = .fontBara(.caption2)

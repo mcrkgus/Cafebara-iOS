@@ -58,4 +58,13 @@ enum I18N {
         static let askReplacementButtonTitle = "요청 보내기"
         static let addAlertTitle = " 님께\n대타 요청을 보내실 건가요?"
     }
+    
+    enum Home {
+        static let noticeEmptyTitle = "올라온 공지사항이 없어요."
+        static let homeNavigationBarTitle = "홈"
+        static let noticeTitle = "공지사항"
+        static let noticeMoreButtonTitle = "더보기"
+        static let todoTitle = "오늘의 할 일"
+        static let todoCheckButtonTitle = "바로 확인하기"
+    }
 }

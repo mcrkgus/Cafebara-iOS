@@ -68,7 +68,7 @@ private extension HomeNoticeCollectionViewCell {
         }
         
         noticeEmptyTitle.do {
-            $0.text = "올라온 공지사항이 없어요."
+            $0.text = I18N.Home.noticeEmptyTitle
             $0.textColor = .gray3
             $0.textAlignment = .left
             $0.font = .fontBara(.body4)
