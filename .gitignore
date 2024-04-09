@@ -62,3 +62,6 @@ xcuserdata/
 # End of https://www.toptal.com/developers/gitignore/api/xcode,swiftpackagemanager,macos
 
 Cafebara-iOS/Cafebara-iOS/GoogleService-Info.plist
+
+# Swift Package Manager package resolution file
+Cafebara-iOS/Cafebara-iOS.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved
