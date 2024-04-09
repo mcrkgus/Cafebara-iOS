@@ -57,7 +57,7 @@ enum TabBarItem: CaseIterable {
     // 탭 별 전환될 화면 -> 나중에 하나씩 추가
     var targetViewController: UIViewController {
         switch self {
-        case .home: return ViewController()
+        case .home: return HomeViewController()
         case .todo: return ViewController() // TodoViewController()
         case .schedule: return ViewController() // ScheduleViewController()
         case .work: return ViewController() // WorkViewController()
