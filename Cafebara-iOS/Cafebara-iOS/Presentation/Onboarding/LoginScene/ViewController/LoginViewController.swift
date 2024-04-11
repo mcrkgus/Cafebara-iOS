@@ -69,4 +69,51 @@ extension LoginViewController: ASAuthorizationControllerDelegate, ASAuthorizatio
     func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
         return self.view.window!
     }
+    /// 성공한 경우
+    func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
+        if let appleIDCredential = authorization.credential as? ASAuthorizationAppleIDCredential {
+            switch authorization.credential {
+            case let appleIDCredential as ASAuthorizationAppleIDCredential:
+                let userIdentifier = appleIDCredential.user
+                let fullName = [appleIDCredential.fullName?.familyName, appleIDCredential.fullName?.givenName]
+                    .compactMap { $0 }
+                    .joined()
+                let email = appleIDCredential.email ?? "No Email"
+                
+                if  let authorizationCode = appleIDCredential.authorizationCode,
+                    let identityToken = appleIDCredential.identityToken,
+                    let authCodeString = String(data: authorizationCode, encoding: .utf8),
+                    let identifyTokenString = String(data: identityToken, encoding: .utf8) {
+                    print("authorizationCode: \(authorizationCode)")
+                    print("identityToken: \(identityToken)")
+                    print("authCodeString: \(authCodeString)")
+                    print("identifyTokenString: \(identifyTokenString)")
+                }
+                
+                /// UserManager를 사용하여 사용자 정보 저장
+                let identityTokenString = String(data: appleIDCredential.identityToken!, encoding: .utf8) ?? ""
+                let loginData = LoginData(userIdentifier: appleIDCredential.user,
+                                          userName: fullName.isEmpty ? nil : fullName,
+                                          userEmail: email != "No Email" ? email : nil,
+                                          token: identityTokenString)
+                UserManager.shared.saveUser(loginData: loginData)
+                
+                //TODO: ViewModel에 로그인 성공을 알림
+                print(fullName + ", email: " + email)
+                print("🍎🍎🍎🍎🍎🍎🍎🍎")
+                viewModel.inputs.handleAppleLoginSuccess(appleIDCredential.user)
+                //TODO: 온보딩 페이지로 이동
+                
+            default:
+                break
+            }
+        }
+        
+        /// 실패한 경우
+        func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
+            //TODO: 에러 처리
+            //TODO: ViewModel에 로그인 실패를 알림
+            viewModel.inputs.handleAppleLoginFailure(error)
+        }
+    }
 }
