@@ -55,13 +55,23 @@ private extension MissionView {
         
         routineImageView.do {
             $0.image = UIImage(resource: .graphicSpeechBubble)
+            $0.isUserInteractionEnabled = true
         }
         
-        routineLabel.do {
-            $0.text = I18N.Mission.routineTitle
-            $0.font = .fontBara(.caption2)
-            $0.asLineHeight(.caption2)
-            $0.textColor = .gray3
+        if SizeLiterals.Screen.deviceRatio > 0.5 {
+            routineLabel.do {
+                $0.text = I18N.Mission.routineTitle
+                $0.font = .fontBara(.caption2)
+                $0.asLineHeight(.caption2)
+                $0.textColor = .gray3
+            }
+        } else {
+            routineLabel.do {
+                $0.text = I18N.Mission.routineTitle
+                $0.font = .fontBara(.body4)
+                $0.asLineHeight(.body4)
+                $0.textColor = .gray3
+            }
         }
         
         routineButton.do {
@@ -85,9 +95,10 @@ private extension MissionView {
     func setHierarchy() {
         addSubviews(navigationBar,
                     staffMissionCollectionView,
-                    routineImageView,
-                    routineLabel,
-                    routineButton)
+                    routineImageView)
+        
+        routineImageView.addSubviews(routineLabel,
+                                     routineButton)
     }
     
     func setLayout() {
@@ -96,22 +107,42 @@ private extension MissionView {
             $0.leading.trailing.equalToSuperview()
         }
         
-        routineImageView.snp.makeConstraints {
-            $0.top.equalTo(navigationBar).offset(49)
-            $0.trailing.equalToSuperview().inset(10)
-            $0.width.equalTo(169)
-            $0.height.equalTo(34)
-        }
-        
-        routineLabel.snp.makeConstraints {
-            $0.bottom.equalTo(routineImageView).inset(7)
-            $0.leading.equalTo(routineImageView).offset(8)
-        }
-        
-        routineButton.snp.makeConstraints {
-            $0.centerY.equalTo(routineLabel)
-            $0.trailing.equalTo(routineImageView).inset(6)
-            $0.size.equalTo(16)
+        if SizeLiterals.Screen.deviceRatio > 0.5 {
+            routineImageView.snp.makeConstraints {
+                $0.top.equalTo(navigationBar).offset(49)
+                $0.trailing.equalToSuperview().inset(10)
+                $0.width.equalTo(169)
+                $0.height.equalTo(34)
+            }
+            
+            routineLabel.snp.makeConstraints {
+                $0.bottom.equalToSuperview().inset(9)
+                $0.leading.equalToSuperview().offset(8)
+            }
+            
+            routineButton.snp.makeConstraints {
+                $0.bottom.equalToSuperview().inset(7)
+                $0.trailing.equalToSuperview().inset(6)
+                $0.size.equalTo(16)
+            }
+        } else {
+            routineImageView.snp.makeConstraints {
+                $0.top.equalTo(navigationBar).offset(49)
+                $0.trailing.equalToSuperview().inset(10)
+                $0.width.equalTo(193)
+                $0.height.equalTo(40)
+            }
+            
+            routineLabel.snp.makeConstraints {
+                $0.bottom.equalToSuperview().inset(8)
+                $0.leading.equalToSuperview().offset(8)
+            }
+            
+            routineButton.snp.makeConstraints {
+                $0.bottom.equalToSuperview().inset(9)
+                $0.trailing.equalToSuperview().inset(6)
+                $0.size.equalTo(16)
+            }
         }
         
         staffMissionCollectionView.snp.makeConstraints {
@@ -131,7 +162,5 @@ extension MissionView {
     
     func setHiddenRoutineInfo() {
         routineImageView.isHidden = true
-        routineLabel.isHidden = true
-        routineButton.isHidden = true
     }
 }
