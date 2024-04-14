@@ -77,7 +77,6 @@
 		A488FBA52B9B616B004D4A09 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = A488FBA42B9B616B004D4A09 /* FSCalendar */; };
 		A488FBA82B9B6B8E004D4A09 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A488FBA72B9B6B8E004D4A09 /* CustomButton.swift */; };
 		A488FBAB2B9B81AB004D4A09 /* CustomToastMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A488FBAA2B9B81AB004D4A09 /* CustomToastMessage.swift */; };
-		E50BE86C2BC7C21700190B93 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E50BE86B2BC7C21700190B93 /* GoogleService-Info.plist */; };
 		E58624222BC7B3EE004829AB /* AuthTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58624212BC7B3EE004829AB /* AuthTarget.swift */; };
 		E58624242BC7B43D004829AB /* AuthAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58624232BC7B43D004829AB /* AuthAPI.swift */; };
 		E58624262BC7B454004829AB /* BaraProviders.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58624252BC7B454004829AB /* BaraProviders.swift */; };
@@ -97,6 +96,7 @@
 		F1D9A8802BBC021D00551905 /* StaffMissionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D9A87F2BBC021D00551905 /* StaffMissionCollectionViewCell.swift */; };
 		F1D9A8822BBD6E8400551905 /* StaffMissionCollectionHeaderVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D9A8812BBD6E8400551905 /* StaffMissionCollectionHeaderVIew.swift */; };
 		F1D9A8852BBEA5A600551905 /* RxDataSources in Frameworks */ = {isa = PBXBuildFile; productRef = F1D9A8842BBEA5A600551905 /* RxDataSources */; };
+		F1F179892BCC1C2500292D91 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F1F179882BCC1C2500292D91 /* GoogleService-Info.plist */; };
 		F1FD4F8E2BB5878D009C3050 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FD4F8D2BB5878D009C3050 /* LoginViewController.swift */; };
 		F1FD4F932BB58841009C3050 /* CustomDropDownTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FD4F922BB58841009C3050 /* CustomDropDownTableViewCell.swift */; };
 		F1FD4F952BB58857009C3050 /* CustomDropDownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FD4F942BB58857009C3050 /* CustomDropDownView.swift */; };
@@ -163,7 +163,6 @@
 		A488FB532B9B10FB004D4A09 /* CustomAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertView.swift; sourceTree = "<group>"; };
 		A488FBA72B9B6B8E004D4A09 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		A488FBAA2B9B81AB004D4A09 /* CustomToastMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomToastMessage.swift; sourceTree = "<group>"; };
-		E50BE86B2BC7C21700190B93 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E58624212BC7B3EE004829AB /* AuthTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTarget.swift; sourceTree = "<group>"; };
 		E58624232BC7B43D004829AB /* AuthAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthAPI.swift; sourceTree = "<group>"; };
 		E58624252BC7B454004829AB /* BaraProviders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaraProviders.swift; sourceTree = "<group>"; };
@@ -181,6 +180,7 @@
 		F1D9A87A2BBBF74200551905 /* StaffMissionInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaffMissionInfo.swift; sourceTree = "<group>"; };
 		F1D9A87F2BBC021D00551905 /* StaffMissionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaffMissionCollectionViewCell.swift; sourceTree = "<group>"; };
 		F1D9A8812BBD6E8400551905 /* StaffMissionCollectionHeaderVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaffMissionCollectionHeaderVIew.swift; sourceTree = "<group>"; };
+		F1F179882BCC1C2500292D91 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F1FD4F8D2BB5878D009C3050 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F1FD4F922BB58841009C3050 /* CustomDropDownTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDropDownTableViewCell.swift; sourceTree = "<group>"; };
 		F1FD4F942BB58857009C3050 /* CustomDropDownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDropDownView.swift; sourceTree = "<group>"; };
@@ -234,7 +234,7 @@
 		833A6AEF2B873317001370CD /* Cafebara-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				E50BE86B2BC7C21700190B93 /* GoogleService-Info.plist */,
+				F1F179882BCC1C2500292D91 /* GoogleService-Info.plist */,
 				A43B22F02BA3022C00E15CC3 /* Cafebara-iOS.entitlements */,
 				833DC7F52B874C340096703B /* Application */,
 				833DC7F42B874C2B0096703B /* Global */,
@@ -738,11 +738,7 @@
 		F1D9A86D2BBAC49B00551905 /* Mission */ = {
 			isa = PBXGroup;
 			children = (
-				F1D9A87E2BBC020500551905 /* Cell */,
-				F1D9A8792BBBF71A00551905 /* Model */,
-				F1D9A8702BBAC4C800551905 /* ViewModel */,
-				F1D9A86F2BBAC4C200551905 /* ViewController */,
-				F1D9A86E2BBAC4B100551905 /* View */,
+				F1F1798A2BCC1CAF00292D91 /* MissionScene */,
 			);
 			path = Mission;
 			sourceTree = "<group>";
@@ -786,6 +782,18 @@
 				F1D9A87F2BBC021D00551905 /* StaffMissionCollectionViewCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		F1F1798A2BCC1CAF00292D91 /* MissionScene */ = {
+			isa = PBXGroup;
+			children = (
+				F1D9A87E2BBC020500551905 /* Cell */,
+				F1D9A8792BBBF71A00551905 /* Model */,
+				F1D9A8702BBAC4C800551905 /* ViewModel */,
+				F1D9A86F2BBAC4C200551905 /* ViewController */,
+				F1D9A86E2BBAC4B100551905 /* View */,
+			);
+			path = MissionScene;
 			sourceTree = "<group>";
 		};
 		F1FD4F8C2BB586D0009C3050 /* ViewController */ = {
@@ -898,7 +906,7 @@
 				A43C73EA2B8F31C900B39F21 /* SUIT-Bold.ttf in Resources */,
 				A43C73E92B8F31C900B39F21 /* SUIT-Medium.ttf in Resources */,
 				833A6AFA2B87331A001370CD /* Assets.xcassets in Resources */,
-				E50BE86C2BC7C21700190B93 /* GoogleService-Info.plist in Resources */,
+				F1F179892BCC1C2500292D91 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
