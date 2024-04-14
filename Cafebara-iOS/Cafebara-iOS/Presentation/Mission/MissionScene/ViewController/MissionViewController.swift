@@ -73,5 +73,8 @@ extension MissionViewController {
                 self.missionView.setHiddenRoutineInfo()
             }
             .disposed(by: disposeBag)
+        missionView.navigationBar.modifyButtonAction = {
+            self.navigationController?.pushViewController(RoutineViewController(viewModel: RoutineViewModel()), animated: true)
+        }
     }
 }
