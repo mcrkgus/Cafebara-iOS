@@ -87,6 +87,8 @@ private extension HomeView {
             $0.appearance.borderRadius = 0.6
             $0.calendarWeekdayView.weekdayLabels.first!.textColor = .errorBara
             $0.calendarWeekdayView.weekdayLabels.last!.textColor = .blueBara
+            $0.appearance.eventDefaultColor = .orangeBara
+            $0.appearance.eventSelectionColor = .orangeBara
         }
         
         scrollView.do {
@@ -137,6 +139,7 @@ private extension HomeView {
             $0.showsVerticalScrollIndicator = false
             $0.isUserInteractionEnabled = false
             $0.collectionViewLayout = layout
+            $0.backgroundColor = .backgroundBara
         }
         
         todoTitle.do {
@@ -288,5 +291,17 @@ extension HomeView {
     
     func bindHomeDropdown(cafe: [String]) {
         homeDropdownView.dataSource = cafe
+    }
+    
+    func remakeCollectionViewHeight(cnt: Int) {
+        if cnt < 2 {
+            self.noticeCollectionView.snp.updateConstraints {
+                $0.height.equalTo(67)
+            }
+        } else {
+            self.noticeCollectionView.snp.updateConstraints {
+                $0.height.equalTo(144)
+            }
+        }
     }
 }
