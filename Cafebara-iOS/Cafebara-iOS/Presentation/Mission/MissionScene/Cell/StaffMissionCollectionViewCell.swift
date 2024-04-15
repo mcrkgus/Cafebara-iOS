@@ -25,7 +25,9 @@ final class StaffMissionCollectionViewCell: UICollectionViewCell, UICollectionVi
     private let swungDashLabel = UILabel()
     private let workEndTimeLabel = UILabel()
     private let verticalLineView = UIView()
-    let giveMissionButton = UIButton()
+    let giveMissionStackView = UIStackView()
+    private let giveMissionImageView = UIImageView()
+    private let giveMissionLabel = UILabel()
     
     // MARK: - Life Cycles
     
@@ -101,12 +103,21 @@ private extension StaffMissionCollectionViewCell {
             $0.textColor = .gray3
         }
         
-        giveMissionButton.do {
-            $0.setTitle("미션 주기", for: .normal)
-            $0.titleLabel?.font = .fontBara(.caption1)
-            $0.setTitleColor(.blueBara, for: .normal)
-            $0.setImage(.icSend, for: .normal)
-            $0.alignTextBelow(spacing: 4)
+        giveMissionStackView.do {
+            $0.spacing = 4
+            $0.axis = .vertical
+            $0.alignment = .center
+        }
+        
+        giveMissionImageView.do {
+            $0.image = UIImage(resource: .icSend)
+        }
+        
+        giveMissionLabel.do {
+            $0.text = I18N.Mission.giveMissionLabel
+            $0.font = .fontBara(.caption1)
+            $0.asLineHeight(.caption1)
+            $0.textColor = .blueBara
         }
     }
     
@@ -115,11 +126,14 @@ private extension StaffMissionCollectionViewCell {
                     workKeywordLabel,
                     workTimeStackView,
                     verticalLineView,
-                    giveMissionButton)
+                    giveMissionStackView)
         
         workTimeStackView.addArrangedSubviews(workStartTimeLabel,
                                               swungDashLabel,
                                               workEndTimeLabel)
+        
+        giveMissionStackView.addArrangedSubviews(giveMissionImageView,
+                                                giveMissionLabel)
     }
     
     func setLayout() {
@@ -144,7 +158,7 @@ private extension StaffMissionCollectionViewCell {
             $0.width.equalTo(1)
         }
         
-        giveMissionButton.snp.makeConstraints {
+        giveMissionStackView.snp.makeConstraints {
             $0.centerY.equalToSuperview()
             $0.trailing.equalToSuperview().inset(20)
             $0.height.equalTo(44)

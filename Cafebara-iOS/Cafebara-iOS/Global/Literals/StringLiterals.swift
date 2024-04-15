@@ -64,5 +64,13 @@ enum I18N {
         static let missionNavigationTitle = "미션"
         static let routineTitle = "반복되는 루틴을 추가해 보세요!"
         static let swungDash = "~"
+        static let giveMissionLabel = "미션 주기"
+    }
+    
+    enum Routine {
+        static let missionNavigationTitle = "루틴"
+        static let noRoutineLabel = "아직 등록된 루틴이 없어요"
+        static let addRoutineLabel = "추가"
+        static let routineDeleteAlertTitle = "작성한 루틴을\n정말 삭제하실 건가요?"
     }
 }
