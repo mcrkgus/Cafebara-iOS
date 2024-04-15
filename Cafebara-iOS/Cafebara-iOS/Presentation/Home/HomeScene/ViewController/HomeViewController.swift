@@ -20,6 +20,9 @@ final class HomeViewController: UIViewController {
     private var pastWorkArray = [Date]()
     private var futureWorkArray = [Date]()
     
+    // TODO: userdefault 값으로 바꾸기
+    private let isOwner: Bool = true
+    
     // MARK: - UI Components
     
     private let homeView = HomeView()
@@ -34,7 +37,7 @@ final class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setUI()
+        setUI(isOwner: self.isOwner)
         bindViewModel()
         setDelegate()
     }
@@ -50,9 +53,10 @@ final class HomeViewController: UIViewController {
 
 extension HomeViewController {
 
-    func setUI() {
+    func setUI(isOwner: Bool) {
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
         self.navigationController?.navigationBar.isHidden = true
+        homeView.setHomeUI(isOwner: isOwner)
     }
 
     func bindViewModel() {
@@ -117,6 +121,14 @@ extension HomeViewController {
         for date in pastWorkArray {
             homeView.homeCalendarView.select(date)
         }
+        
+        homeViewModel.outputs.memberScheduleData
+            .bind(to: homeView.memberCollectionView.rx
+                .items(cellIdentifier: HomeMemberScheduleCollectionViewCell.className,
+                       cellType: HomeMemberScheduleCollectionViewCell.self)) { (_, model, cell) in
+                cell.configureCell(model: model)
+            }
+            .disposed(by: disposeBag)
     }
     
     func setDelegate() {
@@ -130,12 +142,16 @@ extension HomeViewController: FSCalendarDelegateAppearance, FSCalendarDataSource
     func calendar(_ calendar: FSCalendar, appearance: FSCalendarAppearance, titleDefaultColorFor date: Date) -> UIColor? {
         let day = Calendar.current.component(.weekday, from: date) - 1
         
-        if pastWorkArray.contains(date) {
-            return .orange50
-        } else if Calendar.current.isDate(date, inSameDayAs: currentDate) {
+        if Calendar.current.isDate(date, inSameDayAs: currentDate) {
             return .orange10
-        } else if Calendar.current.shortWeekdaySymbols[day] == "일" {
+        }
+        if Calendar.current.shortWeekdaySymbols[day] == "일" {
             return .errorBara
+        }
+        if isOwner {
+            return .gray7
+        } else if pastWorkArray.contains(date) {
+            return .orange50
         } else {
             return .gray7
         }
@@ -150,6 +166,9 @@ extension HomeViewController: FSCalendarDelegateAppearance, FSCalendarDataSource
     }
     
     func calendar(_ calendar: FSCalendar, numberOfEventsFor date: Date) -> Int {
+        if isOwner {
+            return 0
+        }
         if futureWorkArray.contains(date) {
             return 1
         } else {

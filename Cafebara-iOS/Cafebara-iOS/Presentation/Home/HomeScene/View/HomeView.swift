@@ -34,6 +34,8 @@ final class HomeView: UIView {
     private let todoDetailTitle = UILabel()
     private let todoImage = UIImageView(image: UIImage(resource: .profile))
     private let todoCheckButton = UIButton()
+    private let memberTitle = UILabel()
+    lazy var memberCollectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
     
     // MARK: - Life Cycles
     
@@ -171,13 +173,33 @@ private extension HomeView {
             $0.layer.borderWidth = 1
             $0.makeButtonRound(cornerRadius: 25 / 2, borderWidth: 1)
         }
+        
+        memberTitle.do {
+            $0.text = "근무직원"
+            $0.textColor = .gray7
+            $0.font = .fontBara(.title3)
+            $0.asLineHeight(.title3)
+        }
+        
+        memberCollectionView.do {
+            let layout = UICollectionViewFlowLayout()
+            layout.minimumInteritemSpacing = 9
+            layout.scrollDirection = .vertical
+            layout.itemSize = CGSize(width: SizeLiterals.Screen.screenWidth - 40, height: SizeLiterals.Screen.screenHeight * 44 / 812)
+            $0.isScrollEnabled = true
+            $0.showsVerticalScrollIndicator = false
+            $0.isUserInteractionEnabled = false
+            $0.collectionViewLayout = layout
+            $0.backgroundColor = .backgroundBara
+        }
     }
     
     func setHierarchy() {
         todoView.addSubviews(todoDetailTitle, todoCheckButton, todoImage)
         contentView.addSubviews(homeTitle, homeImage,
                                 noticeTitle, noticeMoreButton, noticeCollectionView,
-                                homeDropdownView, todoTitle, todoView)
+                                homeDropdownView, todoTitle, todoView,
+                                memberTitle, memberCollectionView)
         scrollView.addSubview(contentView)
         addSubviews(navigationBar, homeCalendarView, scrollView)
     }
@@ -273,14 +295,37 @@ private extension HomeView {
             $0.width.equalTo(104)
             $0.height.equalTo(88)
         }
+        
+        memberTitle.snp.makeConstraints {
+            $0.top.equalTo(homeImage.snp.bottom).offset(79)
+            $0.leading.equalTo(homeImage)
+        }
+        
+        memberCollectionView.snp.makeConstraints {
+            $0.top.equalTo(memberTitle.snp.bottom).offset(14)
+            $0.centerX.equalToSuperview()
+            $0.width.equalTo(SizeLiterals.Screen.screenWidth - 40)
+            $0.bottom.equalToSuperview()
+        }
     }
     
     func setReigsterCell() {
         HomeNoticeCollectionViewCell.register(target: noticeCollectionView)
+        HomeMemberScheduleCollectionViewCell.register(target: memberCollectionView)
     }
 }
 
 extension HomeView {
+    
+    func setHomeUI(isOwner: Bool) {
+        [memberTitle, memberCollectionView].forEach {
+            $0.isHidden = !isOwner
+        }
+        
+        [noticeTitle, noticeCollectionView, noticeMoreButton, todoTitle, todoView].forEach {
+            $0.isHidden = isOwner
+        }
+    }
     
     func bindHomeTitle(name: String) {
         homeTitle.text = isOwner ? "\(name) 사장님, 반가워요!\n카페바라와 함께 카페를 관리해 볼까요?" : "\(name) 님, 반가워요!\n카페바라와 함께 카페를 관리해 볼까요?"

@@ -82,6 +82,8 @@
 		A4BA86F12BC40ECB0078FC4B /* HomeNoticeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BA86F02BC40ECB0078FC4B /* HomeNoticeCollectionViewCell.swift */; };
 		A4BA86F32BC411210078FC4B /* CafeNoticeDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BA86F22BC411210078FC4B /* CafeNoticeDto.swift */; };
 		A4BA86F52BC427720078FC4B /* ScheduleMyDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BA86F42BC427720078FC4B /* ScheduleMyDto.swift */; };
+		A4BA870B2BCCD52E0078FC4B /* HomeMemberScheduleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BA870A2BCCD52E0078FC4B /* HomeMemberScheduleCollectionViewCell.swift */; };
+		A4BA870D2BCCD5460078FC4B /* MemberScheduleDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BA870C2BCCD5460078FC4B /* MemberScheduleDto.swift */; };
 		F113CB492BA2EFCD00FA6D71 /* MyWorkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F113CB482BA2EFCD00FA6D71 /* MyWorkViewController.swift */; };
 		F113CB4B2BA2F2F600FA6D71 /* MyWorkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F113CB4A2BA2F2F600FA6D71 /* MyWorkView.swift */; };
 		F113CB4D2BA308C800FA6D71 /* MyWorkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F113CB4C2BA308C800FA6D71 /* MyWorkViewModel.swift */; };
@@ -161,6 +163,8 @@
 		A4BA86F02BC40ECB0078FC4B /* HomeNoticeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNoticeCollectionViewCell.swift; sourceTree = "<group>"; };
 		A4BA86F22BC411210078FC4B /* CafeNoticeDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeNoticeDto.swift; sourceTree = "<group>"; };
 		A4BA86F42BC427720078FC4B /* ScheduleMyDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ScheduleMyDto.swift; path = ../../../../../../../Downloads/ScheduleMyDto.swift; sourceTree = "<group>"; };
+		A4BA870A2BCCD52E0078FC4B /* HomeMemberScheduleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMemberScheduleCollectionViewCell.swift; sourceTree = "<group>"; };
+		A4BA870C2BCCD5460078FC4B /* MemberScheduleDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberScheduleDto.swift; sourceTree = "<group>"; };
 		F113CB482BA2EFCD00FA6D71 /* MyWorkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWorkViewController.swift; sourceTree = "<group>"; };
 		F113CB4A2BA2F2F600FA6D71 /* MyWorkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWorkView.swift; sourceTree = "<group>"; };
 		F113CB4C2BA308C800FA6D71 /* MyWorkViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWorkViewModel.swift; sourceTree = "<group>"; };
@@ -655,6 +659,7 @@
 				A4BA86ED2BC3ADF00078FC4B /* CafeAllDto.swift */,
 				A4BA86F22BC411210078FC4B /* CafeNoticeDto.swift */,
 				A4BA86F42BC427720078FC4B /* ScheduleMyDto.swift */,
+				A4BA870C2BCCD5460078FC4B /* MemberScheduleDto.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -663,6 +668,7 @@
 			isa = PBXGroup;
 			children = (
 				A4BA86F02BC40ECB0078FC4B /* HomeNoticeCollectionViewCell.swift */,
+				A4BA870A2BCCD52E0078FC4B /* HomeMemberScheduleCollectionViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -871,6 +877,7 @@
 				F113CB4D2BA308C800FA6D71 /* MyWorkViewModel.swift in Sources */,
 				833DC8042B874D5C0096703B /* UITableViewRegisterable.swift in Sources */,
 				F113CB4B2BA2F2F600FA6D71 /* MyWorkView.swift in Sources */,
+				A4BA870B2BCCD52E0078FC4B /* HomeMemberScheduleCollectionViewCell.swift in Sources */,
 				A43B232F2BA6A45000E15CC3 /* StoreInputView.swift in Sources */,
 				A4667E6F2BB4796600FF3A7D /* LoginView.swift in Sources */,
 				A43B23372BA87C3400E15CC3 /* RegisterCompleteView.swift in Sources */,
@@ -886,6 +893,7 @@
 				A4BA86EC2BC3A9B70078FC4B /* HomeViewModel.swift in Sources */,
 				833DC7FE2B874CED0096703B /* SizeLiterals.swift in Sources */,
 				F190A4A42BB1635B006440F0 /* AskReplacementViewController.swift in Sources */,
+				A4BA870D2BCCD5460078FC4B /* MemberScheduleDto.swift in Sources */,
 				83752E3E2B9F086D0060F047 /* TabBarItem.swift in Sources */,
 				A4BA86E42BC39FAE0078FC4B /* HomeView.swift in Sources */,
 				A43C74062B90527000B39F21 /* HomeAPI.swift in Sources */,
