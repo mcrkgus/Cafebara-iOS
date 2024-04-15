@@ -16,6 +16,9 @@ final class HomeViewController: UIViewController {
     // MARK: - Properties
     
     private let disposeBag = DisposeBag()
+    private let currentDate = Date()
+    private var pastWorkArray = [Date]()
+    private var futureWorkArray = [Date]()
     
     // MARK: - UI Components
     
@@ -76,25 +79,86 @@ extension HomeViewController {
                 cell.configureCell(model: model)
             }
             .disposed(by: disposeBag)
+        
+        homeViewModel.outputs.cafeNoticeData
+            .subscribe(onNext: { owner in
+                self.homeView.remakeCollectionViewHeight(cnt: owner.count)
+            })
+            .disposed(by: disposeBag)
+        
+        homeViewModel.outputs.scheduleMyData
+            .flatMap { cafeNoticeData -> Observable<String> in
+                return Observable.from(cafeNoticeData)
+                    .filter { $0.hasSchedule }
+                    .map { $0.date }
+            }
+            .map { dateString -> Date? in
+                let dateFormatter = DateFormatter()
+                dateFormatter.dateFormat = "yyyy.MM.dd"
+                if let date = dateFormatter.date(from: dateString) {
+                    dateFormatter.dateFormat = "yyyy-MM-dd"
+                    if let formattedDate = dateFormatter.date(from: dateFormatter.string(from: date)) {
+                        return formattedDate
+                    }
+                }
+                return nil
+            }
+            .subscribe(onNext: { date in
+                if let date = date {
+                    if date < self.currentDate {
+                        self.pastWorkArray.append(date)
+                    } else {
+                        self.futureWorkArray.append(date)
+                    }
+                }
+            })
+            .disposed(by: disposeBag)
+        
+        for date in pastWorkArray {
+            homeView.homeCalendarView.select(date)
+        }
     }
     
     func setDelegate() {
         homeView.homeCalendarView.delegate = self
+        homeView.homeCalendarView.dataSource = self
     }
 }
 
-extension HomeViewController: FSCalendarDelegateAppearance {
+extension HomeViewController: FSCalendarDelegateAppearance, FSCalendarDataSource {
     
     func calendar(_ calendar: FSCalendar, appearance: FSCalendarAppearance, titleDefaultColorFor date: Date) -> UIColor? {
         let day = Calendar.current.component(.weekday, from: date) - 1
-        let today = Date()
         
-        if Calendar.current.shortWeekdaySymbols[day] == "일" {
-            return .errorBara
-        } else if Calendar.current.isDate(date, inSameDayAs: today) {
+        if pastWorkArray.contains(date) {
+            return .orange50
+        } else if Calendar.current.isDate(date, inSameDayAs: currentDate) {
             return .orange10
+        } else if Calendar.current.shortWeekdaySymbols[day] == "일" {
+            return .errorBara
         } else {
             return .gray7
         }
+    }
+    
+    func calendar(_ calendar: FSCalendar, appearance: FSCalendarAppearance, titleSelectionColorFor date: Date) -> UIColor? {
+        if pastWorkArray.contains(date) {
+            return .orange50
+        } else {
+            return .clear
+        }
+    }
+    
+    func calendar(_ calendar: FSCalendar, numberOfEventsFor date: Date) -> Int {
+        if futureWorkArray.contains(date) {
+            return 1
+        } else {
+            return 0
+        }
+    }
+    
+    func calendar(_ calendar: FSCalendar, willDisplay cell: FSCalendarCell, for date: Date, at monthPosition: FSCalendarMonthPosition) {
+        let eventScaleFactor: CGFloat = 1.5
+        cell.eventIndicator.transform = CGAffineTransform(scaleX: eventScaleFactor, y: eventScaleFactor)
     }
 }

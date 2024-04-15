@@ -14,12 +14,14 @@ protocol HomeViewModelInputs {
     func getMemberMyDto()
     func getCafeAllDto()
     func getCafeNoticeDto()
+    func getScheduleMyDto()
 }
 
 protocol HomeViewModelOutputs {
     var memberMyData: BehaviorSubject<MemberMyDto> { get }
     var cafeAllData: BehaviorSubject<[CafeAllDto]> { get }
     var cafeNoticeData: BehaviorSubject<[CafeNoticeDto]> { get }
+    var scheduleMyData: BehaviorSubject<[ScheduleMyDto]> { get }
 }
 
 protocol HomeViewModelType {
@@ -36,6 +38,7 @@ final class HomeViewModel: HomeViewModelInputs, HomeViewModelOutputs, HomeViewMo
         getMemberMyDto()
         getCafeAllDto()
         getCafeNoticeDto()
+        getScheduleMyDto()
     }
     
     // input
@@ -52,9 +55,14 @@ final class HomeViewModel: HomeViewModelInputs, HomeViewModelOutputs, HomeViewMo
         cafeNoticeData.onNext(CafeNoticeDto.cafeNoticeInitValue())
     }
     
+    func getScheduleMyDto() {
+        scheduleMyData.onNext(ScheduleMyDto.scheduleMyDtoInitValue())
+    }
+    
     // output
     
     var memberMyData: BehaviorSubject<MemberMyDto> = BehaviorSubject<MemberMyDto>(value: MemberMyDto.memberMyInitValue())
     var cafeAllData: BehaviorSubject<[CafeAllDto]> = BehaviorSubject<[CafeAllDto]>(value: CafeAllDto.cafeAllInitValue())
     var cafeNoticeData: BehaviorSubject<[CafeNoticeDto]> = BehaviorSubject<[CafeNoticeDto]>(value: CafeNoticeDto.cafeNoticeInitValue())
+    var scheduleMyData: BehaviorSubject<[ScheduleMyDto]> = BehaviorSubject<[ScheduleMyDto]>(value: ScheduleMyDto.scheduleMyDtoInitValue())
 }
