@@ -68,9 +68,20 @@ enum I18N {
     }
     
     enum Routine {
-        static let missionNavigationTitle = "루틴"
+        static let routineNavigationTitle = "루틴"
         static let noRoutineLabel = "아직 등록된 루틴이 없어요"
         static let addRoutineLabel = "추가"
         static let routineDeleteAlertTitle = "작성한 루틴을\n정말 삭제하실 건가요?"
+    }
+    
+    enum AddRoutine {
+        static let addRoutineNavigationTitle = "루틴 추가"
+        static let workTitleLabel = "근무 라벨"
+        static let workManualLabel = "우측 수정하기를 눌러 추가된 라벨을 수정해 보세요!"
+        static let routineCategoryLabel = "루틴 항목"
+        static let routineTodoTextViewPlaceholder = "해야할 일을 적어 주세요!"
+        static let changeAddButtonTitle = "추가하기"
+        static let changeModifyButtonTitle = "수정하기"
+        static let addRoutineKeywordLabel = "새로 추가하기"
     }
 }
