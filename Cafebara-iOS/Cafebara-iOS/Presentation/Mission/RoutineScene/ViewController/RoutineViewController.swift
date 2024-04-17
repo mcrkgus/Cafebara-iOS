@@ -73,6 +73,13 @@ extension RoutineViewController {
             },
             configureSupplementaryView: { (_, collectionView, _, indexPath) in
                 let headerView = RoutineCollectionHeaderView.dequeueReusableHeaderView(collectionView: collectionView, indexPath: indexPath)
+                headerView.addRoutineView.rx.tapGesture()
+                    .when(.recognized)
+                    .bind { [weak self] _ in
+                        guard let self = self else { return }
+                        self.navigationController?.pushViewController(AddRoutineViewController(viewModel: viewModel), animated: true)
+                    }
+                    .disposed(by: self.disposeBag)
                 
                 return headerView
             }
