@@ -103,6 +103,11 @@
 		F1F179982BCC1F0600292D91 /* RoutineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F179972BCC1F0600292D91 /* RoutineView.swift */; };
 		F1F1799A2BCC1F2300292D91 /* RoutineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F179992BCC1F2300292D91 /* RoutineViewController.swift */; };
 		F1F1799C2BCC1F4B00292D91 /* RoutineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F1799B2BCC1F4B00292D91 /* RoutineViewModel.swift */; };
+		F1F179A12BCD43C100292D91 /* AddRoutineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F179A02BCD43C100292D91 /* AddRoutineView.swift */; };
+		F1F179A32BCD43D100292D91 /* AddRoutineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F179A22BCD43D100292D91 /* AddRoutineViewController.swift */; };
+		F1F179A62BCE8D2500292D91 /* RoutineKeywordInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F179A52BCE8D2500292D91 /* RoutineKeywordInfo.swift */; };
+		F1F179AA2BCE8E1B00292D91 /* RoutineKeywordCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F179A92BCE8E1B00292D91 /* RoutineKeywordCollectionViewCell.swift */; };
+		F1F179B12BD0008800292D91 /* LeftAlignedCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F179B02BD0008800292D91 /* LeftAlignedCollectionViewFlowLayout.swift */; };
 		F1FD4F8E2BB5878D009C3050 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FD4F8D2BB5878D009C3050 /* LoginViewController.swift */; };
 		F1FD4F932BB58841009C3050 /* CustomDropDownTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FD4F922BB58841009C3050 /* CustomDropDownTableViewCell.swift */; };
 		F1FD4F952BB58857009C3050 /* CustomDropDownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FD4F942BB58857009C3050 /* CustomDropDownView.swift */; };
@@ -193,6 +198,11 @@
 		F1F179972BCC1F0600292D91 /* RoutineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineView.swift; sourceTree = "<group>"; };
 		F1F179992BCC1F2300292D91 /* RoutineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineViewController.swift; sourceTree = "<group>"; };
 		F1F1799B2BCC1F4B00292D91 /* RoutineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineViewModel.swift; sourceTree = "<group>"; };
+		F1F179A02BCD43C100292D91 /* AddRoutineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRoutineView.swift; sourceTree = "<group>"; };
+		F1F179A22BCD43D100292D91 /* AddRoutineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRoutineViewController.swift; sourceTree = "<group>"; };
+		F1F179A52BCE8D2500292D91 /* RoutineKeywordInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineKeywordInfo.swift; sourceTree = "<group>"; };
+		F1F179A92BCE8E1B00292D91 /* RoutineKeywordCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineKeywordCollectionViewCell.swift; sourceTree = "<group>"; };
+		F1F179B02BD0008800292D91 /* LeftAlignedCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftAlignedCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		F1FD4F8D2BB5878D009C3050 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F1FD4F922BB58841009C3050 /* CustomDropDownTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDropDownTableViewCell.swift; sourceTree = "<group>"; };
 		F1FD4F942BB58857009C3050 /* CustomDropDownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDropDownView.swift; sourceTree = "<group>"; };
@@ -750,6 +760,7 @@
 		F1D9A86D2BBAC49B00551905 /* Mission */ = {
 			isa = PBXGroup;
 			children = (
+				F1F1799D2BCD439800292D91 /* AddRoutineScene */,
 				F1F1798B2BCC1E6200292D91 /* RoutineScene */,
 				F1F1798A2BCC1CAF00292D91 /* MissionScene */,
 			);
@@ -860,6 +871,58 @@
 				F1F179912BCC1EA300292D91 /* RoutineCollectionViewCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		F1F1799D2BCD439800292D91 /* AddRoutineScene */ = {
+			isa = PBXGroup;
+			children = (
+				F1F179AF2BD0006300292D91 /* Component */,
+				F1F179A82BCE8DAD00292D91 /* Cell */,
+				F1F179A42BCE8D1000292D91 /* Model */,
+				F1F1799F2BCD43AE00292D91 /* ViewController */,
+				F1F1799E2BCD43A600292D91 /* View */,
+			);
+			path = AddRoutineScene;
+			sourceTree = "<group>";
+		};
+		F1F1799E2BCD43A600292D91 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F1F179A02BCD43C100292D91 /* AddRoutineView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F1F1799F2BCD43AE00292D91 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F1F179A22BCD43D100292D91 /* AddRoutineViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		F1F179A42BCE8D1000292D91 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F1F179A52BCE8D2500292D91 /* RoutineKeywordInfo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F1F179A82BCE8DAD00292D91 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F1F179A92BCE8E1B00292D91 /* RoutineKeywordCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		F1F179AF2BD0006300292D91 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				F1F179B02BD0008800292D91 /* LeftAlignedCollectionViewFlowLayout.swift */,
+			);
+			path = Component;
 			sourceTree = "<group>";
 		};
 		F1FD4F8C2BB586D0009C3050 /* ViewController */ = {
@@ -1005,11 +1068,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1F179A32BCD43D100292D91 /* AddRoutineViewController.swift in Sources */,
 				F1D9A87B2BBBF74200551905 /* StaffMissionInfo.swift in Sources */,
 				F1FD4F952BB58857009C3050 /* CustomDropDownView.swift in Sources */,
 				A43C74002B90518800B39F21 /* BaseTargetType.swift in Sources */,
 				E58624222BC7B3EE004829AB /* AuthTarget.swift in Sources */,
+				F1F179AA2BCE8E1B00292D91 /* RoutineKeywordCollectionViewCell.swift in Sources */,
 				833DC7FA2B874CD50096703B /* FontLiterals.swift in Sources */,
+				F1F179A62BCE8D2500292D91 /* RoutineKeywordInfo.swift in Sources */,
 				A43C73F62B90515300B39F21 /* GeneralResponse.swift in Sources */,
 				A488FB462B9AFAF4004D4A09 /* CustomNavigationView.swift in Sources */,
 				A488FBAB2B9B81AB004D4A09 /* CustomToastMessage.swift in Sources */,
@@ -1024,6 +1090,7 @@
 				A41289E32B9F731300E3462D /* RoleChoiceViewController.swift in Sources */,
 				8304715A2B87BBC2005AEEB4 /* UIButton+.swift in Sources */,
 				F113CB4D2BA308C800FA6D71 /* MyWorkViewModel.swift in Sources */,
+				F1F179A12BCD43C100292D91 /* AddRoutineView.swift in Sources */,
 				F1D9A8822BBD6E8400551905 /* StaffMissionCollectionHeaderVIew.swift in Sources */,
 				833DC8042B874D5C0096703B /* UITableViewRegisterable.swift in Sources */,
 				E58624242BC7B43D004829AB /* AuthAPI.swift in Sources */,
@@ -1046,6 +1113,7 @@
 				F1D9A8742BBAC4E100551905 /* MissionViewController.swift in Sources */,
 				8304715E2B87BD22005AEEB4 /* UIImageView+.swift in Sources */,
 				833DC7FE2B874CED0096703B /* SizeLiterals.swift in Sources */,
+				F1F179B12BD0008800292D91 /* LeftAlignedCollectionViewFlowLayout.swift in Sources */,
 				F190A4A42BB1635B006440F0 /* AskReplacementViewController.swift in Sources */,
 				F1D9A8802BBC021D00551905 /* StaffMissionCollectionViewCell.swift in Sources */,
 				833A6AF52B873317001370CD /* ViewController.swift in Sources */,

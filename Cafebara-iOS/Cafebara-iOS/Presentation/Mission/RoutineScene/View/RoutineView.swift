@@ -52,7 +52,7 @@ private extension RoutineView {
         navigationBar.do {
             $0.isBackButtonIncluded = true
             $0.isTitleLabelIncluded = true
-            $0.titleLabelText = I18N.Routine.missionNavigationTitle
+            $0.titleLabelText = I18N.Routine.routineNavigationTitle
         }
         
         noRoutineImageView.do {
