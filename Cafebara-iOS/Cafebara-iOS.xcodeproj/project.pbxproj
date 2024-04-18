@@ -172,11 +172,6 @@
 		A488FB532B9B10FB004D4A09 /* CustomAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertView.swift; sourceTree = "<group>"; };
 		A488FBA72B9B6B8E004D4A09 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		A488FBAA2B9B81AB004D4A09 /* CustomToastMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomToastMessage.swift; sourceTree = "<group>"; };
-		E58624212BC7B3EE004829AB /* AuthTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTarget.swift; sourceTree = "<group>"; };
-		E58624232BC7B43D004829AB /* AuthAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthAPI.swift; sourceTree = "<group>"; };
-		E58624252BC7B454004829AB /* BaraProviders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaraProviders.swift; sourceTree = "<group>"; };
-		E58624272BC7B47B004829AB /* BaraInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaraInterceptor.swift; sourceTree = "<group>"; };
-		E586242B2BC7B57A004829AB /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		A4BA86E12BC39F930078FC4B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		A4BA86E32BC39FAE0078FC4B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		A4BA86E62BC3A0170078FC4B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -188,6 +183,11 @@
 		A4BA86F42BC427720078FC4B /* ScheduleMyDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ScheduleMyDto.swift; path = ../../../../../../../Downloads/ScheduleMyDto.swift; sourceTree = "<group>"; };
 		A4BA870A2BCCD52E0078FC4B /* HomeMemberScheduleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMemberScheduleCollectionViewCell.swift; sourceTree = "<group>"; };
 		A4BA870C2BCCD5460078FC4B /* MemberScheduleDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberScheduleDto.swift; sourceTree = "<group>"; };
+		E58624212BC7B3EE004829AB /* AuthTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTarget.swift; sourceTree = "<group>"; };
+		E58624232BC7B43D004829AB /* AuthAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthAPI.swift; sourceTree = "<group>"; };
+		E58624252BC7B454004829AB /* BaraProviders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaraProviders.swift; sourceTree = "<group>"; };
+		E58624272BC7B47B004829AB /* BaraInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaraInterceptor.swift; sourceTree = "<group>"; };
+		E586242B2BC7B57A004829AB /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		F113CB482BA2EFCD00FA6D71 /* MyWorkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWorkViewController.swift; sourceTree = "<group>"; };
 		F113CB4A2BA2F2F600FA6D71 /* MyWorkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWorkView.swift; sourceTree = "<group>"; };
 		F113CB4C2BA308C800FA6D71 /* MyWorkViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWorkViewModel.swift; sourceTree = "<group>"; };
@@ -694,22 +694,6 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
-		E586242D2BC7B5DC004829AB /* Auth */ = {
-			isa = PBXGroup;
-			children = (
-				E58624232BC7B43D004829AB /* AuthAPI.swift */,
-			);
-			path = Auth;
-			sourceTree = "<group>";
-		};
-		E586242E2BC7B5EC004829AB /* Auth */ = {
-			isa = PBXGroup;
-			children = (
-				E58624212BC7B3EE004829AB /* AuthTarget.swift */,
-			);
-			path = Auth;
-			sourceTree = "<group>";
-		};
 		A4BA86E82BC3A8C20078FC4B /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -729,6 +713,22 @@
 				A4BA870A2BCCD52E0078FC4B /* HomeMemberScheduleCollectionViewCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		E586242D2BC7B5DC004829AB /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				E58624232BC7B43D004829AB /* AuthAPI.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		E586242E2BC7B5EC004829AB /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				E58624212BC7B3EE004829AB /* AuthTarget.swift */,
+			);
+			path = Auth;
 			sourceTree = "<group>";
 		};
 		F113CB432BA2EF3E00FA6D71 /* MyWorkScene */ = {
@@ -1079,7 +1079,6 @@
 				833DC7FE2B874CED0096703B /* SizeLiterals.swift in Sources */,
 				F190A4A42BB1635B006440F0 /* AskReplacementViewController.swift in Sources */,
 				F1D9A8802BBC021D00551905 /* StaffMissionCollectionViewCell.swift in Sources */,
-				833A6AF52B873317001370CD /* ViewController.swift in Sources */,
 				A4BA870D2BCCD5460078FC4B /* MemberScheduleDto.swift in Sources */,
 				83752E3E2B9F086D0060F047 /* TabBarItem.swift in Sources */,
 				E586242C2BC7B57A004829AB /* UserManager.swift in Sources */,
@@ -1101,7 +1100,6 @@
 				A41289EC2BA04BA600E3462D /* NameInputView.swift in Sources */,
 				A43C74032B90525F00B39F21 /* HomeTarget.swift in Sources */,
 				F1F179982BCC1F0600292D91 /* RoutineView.swift in Sources */,
-				833DC8152B8750F30096703B /* HomeView.swift in Sources */,
 				E58624282BC7B47B004829AB /* BaraInterceptor.swift in Sources */,
 				A43C73FC2B90517200B39F21 /* URLConstant.swift in Sources */,
 				F1FD4F8E2BB5878D009C3050 /* LoginViewController.swift in Sources */,
