@@ -13,6 +13,6 @@ struct MyWorkInfo: Codable {
     let workKeywordTextColor: String
     let workKeywordBackColor: String
     let startTime: String
-    let endTiem: String
+    let endTime: String
     let name: String
 }
