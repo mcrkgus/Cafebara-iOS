@@ -198,8 +198,8 @@ private extension HomeView {
         todoView.addSubviews(todoDetailTitle, todoCheckButton, todoImage)
         contentView.addSubviews(homeTitle, homeImage,
                                 noticeTitle, noticeMoreButton, noticeCollectionView,
-                                homeDropdownView, todoTitle, todoView,
-                                memberTitle, memberCollectionView)
+                                memberTitle, memberCollectionView,
+                                homeDropdownView, todoTitle, todoView)
         scrollView.addSubview(contentView)
         addSubviews(navigationBar, homeCalendarView, scrollView)
     }
