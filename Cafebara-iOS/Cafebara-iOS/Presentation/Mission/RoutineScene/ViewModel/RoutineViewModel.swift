@@ -16,6 +16,8 @@ protocol RoutineViewModelInputs {
 
 protocol RoutineViewModelOutputs {
     var routineInfo: BehaviorSubject<[SectionOfRoutine]> { get }
+    var routineKeywordInfo: BehaviorSubject<[RoutineKeywordInfo]> { get }
+    var routineKeywordCollectionViewHeight: PublishRelay<Int> { get }
 }
 
 protocol RoutineViewModelType {
@@ -34,6 +36,8 @@ final class RoutineViewModel: RoutineViewModelInputs, RoutineViewModelOutputs, R
     
     // output
     var routineInfo = BehaviorSubject<[SectionOfRoutine]>(value: [])
+    var routineKeywordInfo = BehaviorSubject<[RoutineKeywordInfo]>(value: [])
+    var routineKeywordCollectionViewHeight = PublishRelay<Int>()
     
     init() {
         let routineInfoDTO: [RoutineInfo] = [
@@ -48,6 +52,16 @@ final class RoutineViewModel: RoutineViewModelInputs, RoutineViewModelOutputs, R
             RoutineInfo(routineKeyword: "미들", routineKeywordTextColor: "#FF4F4F", routineKeywordBackColor: "#FFF3F3", routineExplain: "미들에는 그냥 몰래몰래 쉬는거야~")
         ]
         routineInfo.onNext([SectionOfRoutine(items: routineInfoDTO)])
+        
+        let routineKeywordInfoDTO: [RoutineKeywordInfo] = [
+            RoutineKeywordInfo(routineKeyword: "오픈", routineKeywordTextColor: "#1F9BB6", routineKeywordBackColor: "#EAFBFA"),
+            RoutineKeywordInfo(routineKeyword: "미들", routineKeywordTextColor: "#6CB731", routineKeywordBackColor: "#F6FEF3"),
+            RoutineKeywordInfo(routineKeyword: "마감", routineKeywordTextColor: "#D14892", routineKeywordBackColor: "#FFF3FD"),
+            RoutineKeywordInfo(routineKeyword: "오픈오픈오픈", routineKeywordTextColor: "#7827C9", routineKeywordBackColor: "#F6F1FD"),
+            RoutineKeywordInfo(routineKeyword: "미들미들미들", routineKeywordTextColor: "#FF4F4F", routineKeywordBackColor: "#FFF3F3"),
+            RoutineKeywordInfo(routineKeyword: I18N.AddRoutine.addRoutineKeywordLabel, routineKeywordTextColor: "#FF4F4F", routineKeywordBackColor: "#FFF3F3")
+        ]
+        routineKeywordInfo.onNext(routineKeywordInfoDTO)
     }
 }
 
