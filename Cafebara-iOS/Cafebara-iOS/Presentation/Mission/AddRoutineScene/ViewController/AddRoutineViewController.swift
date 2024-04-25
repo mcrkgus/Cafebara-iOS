@@ -42,6 +42,11 @@ final class AddRoutineViewController: UIViewController {
         setUI()
         bindViewModel()
         setDelegate()
+        setGesture()
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
 }
 
@@ -86,9 +91,41 @@ extension AddRoutineViewController {
                 }
             }
             .disposed(by: disposeBag)
+        
+        addRoutineView.routineTodoTextView.rx.text.orEmpty
+            .subscribe(onNext: { [weak self] text in
+                guard let self = self else { return }
+                
+                if text.count > 30 {
+                    let index = text.index(text.startIndex, offsetBy: 30)
+                    let newText = text[text.startIndex..<index]
+                    self.addRoutineView.routineTodoTextView.text = String(newText)
+                }
+                
+                if text.count == 0 && addRoutineView.routineTodoTextView.textColor == UIColor.gray7 {
+                    addRoutineView.routineTodoTextViewClearButton.isHidden = true
+                } else if text.count != 0 && addRoutineView.routineTodoTextView.textColor == UIColor.gray7 {
+                    addRoutineView.routineTodoTextViewClearButton.isHidden = false
+                }
+            })
+            .disposed(by: disposeBag)
+    }
+    
+    func setGesture() {
+        addRoutineView.navigationBar.backButtonAction = {
+            self.navigationController?.popViewController(animated: true)
+        }
+        
+        addRoutineView.routineTodoTextViewClearButton.rx.tap
+            .bind { [weak self] _ in
+                guard let self = self else { return }
+                
+                self.addRoutineView.routineTodoTextView.text = ""
+                self.addRoutineView.routineTodoTextView.becomeFirstResponder()
+            }
+            .disposed(by: disposeBag)
     }
     
     func setDelegate() {
-//        RoutineKeywordCollectionViewCell.register(target: addRoutineView.routineKeyworkCollectionView)
     }
 }

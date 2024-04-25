@@ -110,7 +110,7 @@ private extension AddRoutineView {
             $0.textContainerInset = UIEdgeInsets(top: 16,
                                                  left: 16,
                                                  bottom: 16,
-                                                 right: 16)
+                                                 right: 56)
             $0.text = I18N.AddRoutine.routineTodoTextViewPlaceholder
             $0.font = .fontBara(.body3)
             $0.textColor = .gray2
@@ -120,6 +120,7 @@ private extension AddRoutineView {
         
         routineTodoTextViewClearButton.do {
             $0.setImage(UIImage(resource: .icTextDeleteCircle), for: .normal)
+            $0.isHidden = true
         }
     }
     
