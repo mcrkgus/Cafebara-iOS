@@ -23,18 +23,18 @@ final class HomeView: UIView {
     let homeCalendarView = FSCalendar(frame: .zero)
     private let scrollView = UIScrollView()
     private let contentView = UIView()
-    private let homeTitle = UILabel()
-    private let homeImage = UIImageView(image: UIImage(resource: .profile))
+    private let homeTitleLabel = UILabel()
+    private let homeImageView = UIImageView(image: UIImage(resource: .profile))
     let homeDropdownView = CustomDropDownView(type: .large)
-    private let noticeTitle = UILabel()
+    private let noticeTitleLabel = UILabel()
     private let noticeMoreButton = UIButton()
     lazy var noticeCollectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
-    private let todoTitle = UILabel()
+    private let todoTitleLabel = UILabel()
     private let todoView = UIView()
-    private let todoDetailTitle = UILabel()
-    private let todoImage = UIImageView(image: UIImage(resource: .profile))
+    private let todoDetailTitleLabel = UILabel()
+    private let todoImageView = UIImageView(image: UIImage(resource: .profile))
     private let todoCheckButton = UIButton()
-    private let memberTitle = UILabel()
+    private let memberTitleLabel = UILabel()
     lazy var memberCollectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
     
     // MARK: - Life Cycles
@@ -99,11 +99,7 @@ private extension HomeView {
             $0.showsVerticalScrollIndicator = false
         }
         
-        contentView.do {
-            $0.translatesAutoresizingMaskIntoConstraints = false
-        }
-        
-        homeTitle.do {
+        homeTitleLabel.do {
             $0.textColor = .gray7
             $0.font = .fontBara(.title2)
             $0.asLineHeight(.title2)
@@ -117,7 +113,7 @@ private extension HomeView {
             $0.selectedItemTextColor = .blueBara
         }
         
-        noticeTitle.do {
+        noticeTitleLabel.do {
             $0.text = I18N.Home.noticeTitle
             $0.textColor = .gray7
             $0.font = .fontBara(.title3)
@@ -144,7 +140,7 @@ private extension HomeView {
             $0.backgroundColor = .backgroundBara
         }
         
-        todoTitle.do {
+        todoTitleLabel.do {
             $0.text = I18N.Home.todoTitle
             $0.textColor = .gray7
             $0.font = .fontBara(.title3)
@@ -156,7 +152,7 @@ private extension HomeView {
             $0.setRoundBorder(borderColor: .gray1, borderWidth: 1, cornerRadius: 10)
         }
         
-        todoDetailTitle.do {
+        todoDetailTitleLabel.do {
             $0.textColor = .gray7
             $0.font = .fontBara(.caption1)
             $0.asLineHeight(.caption1)
@@ -169,13 +165,11 @@ private extension HomeView {
             $0.setTitleColor(.gray2, for: .disabled)
             $0.titleLabel?.font = .fontBara(.caption2)
             $0.titleLabel?.asLineHeight(.caption2)
-            $0.layer.borderColor = UIColor.orangeBara.cgColor
-            $0.layer.borderWidth = 1
-            $0.makeButtonRound(cornerRadius: 25 / 2, borderWidth: 1)
+            $0.makeRoundBorder(cornerRadius: 25 / 2, borderWidth: 1.0, borderColor: UIColor.orangeBara)
         }
         
-        memberTitle.do {
-            $0.text = "근무직원"
+        memberTitleLabel.do {
+            $0.text = I18N.Home.memberTitle
             $0.textColor = .gray7
             $0.font = .fontBara(.title3)
             $0.asLineHeight(.title3)
@@ -185,7 +179,7 @@ private extension HomeView {
             let layout = UICollectionViewFlowLayout()
             layout.minimumInteritemSpacing = 9
             layout.scrollDirection = .vertical
-            layout.itemSize = CGSize(width: SizeLiterals.Screen.screenWidth - 40, height: SizeLiterals.Screen.screenHeight * 44 / 812)
+            layout.itemSize = CGSize(width: SizeLiterals.Screen.screenWidth - 40, height: 44)
             $0.isScrollEnabled = true
             $0.showsVerticalScrollIndicator = false
             $0.isUserInteractionEnabled = false
@@ -195,11 +189,11 @@ private extension HomeView {
     }
     
     func setHierarchy() {
-        todoView.addSubviews(todoDetailTitle, todoCheckButton, todoImage)
-        contentView.addSubviews(homeTitle, homeImage,
-                                noticeTitle, noticeMoreButton, noticeCollectionView,
-                                memberTitle, memberCollectionView,
-                                homeDropdownView, todoTitle, todoView)
+        todoView.addSubviews(todoDetailTitleLabel, todoCheckButton, todoImageView)
+        contentView.addSubviews(homeTitleLabel, homeImageView,
+                                noticeTitleLabel, noticeMoreButton, noticeCollectionView,
+                                memberTitleLabel, memberCollectionView,
+                                homeDropdownView, todoTitleLabel, todoView)
         scrollView.addSubview(contentView)
         addSubviews(navigationBar, homeCalendarView, scrollView)
     }
@@ -223,86 +217,86 @@ private extension HomeView {
         }
         
         contentView.snp.makeConstraints {
-            $0.top.leading.trailing.equalToSuperview()
-            $0.bottom.equalToSuperview().inset(52)
+            $0.edges.equalToSuperview()
             $0.width.equalTo(scrollView.snp.width)
-            $0.height.equalTo(scrollView.snp.height)
+            $0.height.greaterThanOrEqualTo(self.snp.height).priority(.low)
         }
         
-        homeTitle.snp.makeConstraints {
+        homeTitleLabel.snp.makeConstraints {
             $0.top.equalToSuperview()
             $0.leading.equalToSuperview().offset(20)
         }
         
-        homeImage.snp.makeConstraints {
-            $0.top.equalTo(homeTitle.snp.bottom).offset(12)
+        homeImageView.snp.makeConstraints {
+            $0.top.equalTo(homeTitleLabel.snp.bottom).offset(12)
             $0.centerX.equalToSuperview()
             $0.width.equalTo(SizeLiterals.Screen.screenWidth - 40)
             $0.height.equalTo(159)
         }
         
         homeDropdownView.snp.makeConstraints {
-            $0.top.equalTo(homeImage.snp.bottom).offset(-11)
-            $0.leading.equalTo(homeImage)
+            $0.top.equalTo(homeImageView.snp.bottom).offset(-11)
+            $0.leading.equalTo(homeImageView)
         }
         
-        noticeTitle.snp.makeConstraints {
-            $0.top.equalTo(homeImage.snp.bottom).offset(79)
-            $0.leading.equalTo(homeImage)
+        noticeTitleLabel.snp.makeConstraints {
+            $0.top.equalTo(homeImageView.snp.bottom).offset(79)
+            $0.leading.equalTo(homeImageView)
         }
         
         noticeMoreButton.snp.makeConstraints {
-            $0.top.equalTo(homeImage.snp.bottom).offset(75)
-            $0.trailing.equalTo(homeImage)
+            $0.top.equalTo(homeImageView.snp.bottom).offset(75)
+            $0.trailing.equalTo(homeImageView)
             $0.width.equalTo(50)
             $0.height.equalTo(30)
         }
         
         noticeCollectionView.snp.makeConstraints {
-            $0.top.equalTo(noticeTitle.snp.bottom).offset(18)
+            $0.top.equalTo(noticeTitleLabel.snp.bottom).offset(18)
             $0.centerX.equalToSuperview()
             $0.width.equalTo(SizeLiterals.Screen.screenWidth - 40)
             $0.height.equalTo(144)
         }
         
-        todoTitle.snp.makeConstraints {
+        todoTitleLabel.snp.makeConstraints {
             $0.top.equalTo(noticeCollectionView.snp.bottom).offset(32)
-            $0.leading.equalTo(noticeTitle)
+            $0.leading.equalTo(noticeTitleLabel)
         }
         
         todoView.snp.makeConstraints {
-            $0.top.equalTo(todoTitle.snp.bottom).offset(14)
+            $0.top.equalTo(todoTitleLabel.snp.bottom).offset(14)
             $0.centerX.equalToSuperview()
             $0.width.equalTo(SizeLiterals.Screen.screenWidth - 40)
             $0.height.equalTo(120)
+            $0.bottom.equalToSuperview().inset(12)
         }
         
-        todoDetailTitle.snp.makeConstraints {
+        todoDetailTitleLabel.snp.makeConstraints {
             $0.top.equalToSuperview().inset(23)
             $0.leading.equalToSuperview().inset(20)
         }
         
         todoCheckButton.snp.makeConstraints {
             $0.bottom.equalToSuperview().inset(23)
-            $0.leading.equalTo(todoDetailTitle)
+            $0.leading.equalTo(todoDetailTitleLabel)
             $0.width.equalTo(95)
             $0.height.equalTo(25)
         }
         
-        todoImage.snp.makeConstraints {
+        todoImageView.snp.makeConstraints {
             $0.bottom.equalToSuperview()
             $0.trailing.equalToSuperview().inset(8)
             $0.width.equalTo(104)
             $0.height.equalTo(88)
         }
         
-        memberTitle.snp.makeConstraints {
-            $0.top.equalTo(homeImage.snp.bottom).offset(79)
-            $0.leading.equalTo(homeImage)
+        memberTitleLabel.snp.makeConstraints {
+            $0.top.equalTo(homeImageView.snp.bottom).offset(79)
+            $0.leading.equalTo(homeImageView)
         }
         
         memberCollectionView.snp.makeConstraints {
-            $0.top.equalTo(memberTitle.snp.bottom).offset(14)
+            $0.top.equalTo(memberTitleLabel.snp.bottom).offset(14)
             $0.centerX.equalToSuperview()
             $0.width.equalTo(SizeLiterals.Screen.screenWidth - 40)
             $0.bottom.equalToSuperview()
@@ -318,20 +312,20 @@ private extension HomeView {
 extension HomeView {
     
     func setHomeUI(isOwner: Bool) {
-        [memberTitle, memberCollectionView].forEach {
+        [memberTitleLabel, memberCollectionView].forEach {
             $0.isHidden = !isOwner
         }
         
-        [noticeTitle, noticeCollectionView, noticeMoreButton, todoTitle, todoView].forEach {
+        [noticeTitleLabel, noticeCollectionView, noticeMoreButton, todoTitleLabel, todoView].forEach {
             $0.isHidden = isOwner
         }
     }
     
     func bindHomeTitle(name: String) {
-        homeTitle.text = isOwner ? "\(name) 사장님, 반가워요!\n카페바라와 함께 카페를 관리해 볼까요?" : "\(name) 님, 반가워요!\n카페바라와 함께 카페를 관리해 볼까요?"
-        homeTitle.asColor(targetString: name, color: .blueBara)
-        todoDetailTitle.text = "\(name) 님,\n사장님이 보낸 오늘의 미션이 도착했어요!"
-        todoDetailTitle.asColor(targetString: name, color: .blueBara)
+        homeTitleLabel.text = isOwner ? name + I18N.Home.ownerHomeTitle : name + I18N.Home.staffHomeTitle
+        homeTitleLabel.asColor(targetString: name, color: .blueBara)
+        todoDetailTitleLabel.text = name + I18N.Home.staffMissionTitle
+        todoDetailTitleLabel.asColor(targetString: name, color: .blueBara)
     }
     
     func bindHomeDropdown(cafe: [String]) {

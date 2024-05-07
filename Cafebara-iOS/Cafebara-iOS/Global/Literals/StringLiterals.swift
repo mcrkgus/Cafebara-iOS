@@ -81,5 +81,9 @@ enum I18N {
         static let noticeMoreButtonTitle = "더보기"
         static let todoTitle = "오늘의 할 일"
         static let todoCheckButtonTitle = "바로 확인하기"
+        static let memberTitle = "근무직원"
+        static let ownerHomeTitle = "사장님, 반가워요!\n카페바라와 함께 카페를 관리해 볼까요?"
+        static let staffHomeTitle = "님, 반가워요!\n카페바라와 함께 카페를 관리해 볼까요?"
+        static let staffMissionTitle = "님,\n사장님이 보낸 오늘의 미션이 도착했어요!"
     }
 }

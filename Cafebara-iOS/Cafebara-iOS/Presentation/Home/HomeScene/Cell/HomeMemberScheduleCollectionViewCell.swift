@@ -23,7 +23,7 @@ final class HomeMemberScheduleCollectionViewCell: UICollectionViewCell, UICollec
     private let memberPartEndTimeLabel = UILabel()
     private let memberPartMidLabel = UILabel()
     private let memberPartTimeStackView = UIStackView()
-    private let memberScheduleType = UILabel()
+    private let memberScheduleTypeLabel = UILabel()
     
     // MARK: - Life Cycles
     
@@ -59,7 +59,7 @@ private extension HomeMemberScheduleCollectionViewCell {
             $0.textColor = .gray7
         }
         
-        memberScheduleType.do {
+        memberScheduleTypeLabel.do {
             $0.font = .fontBara(.caption1)
             $0.asLineHeight(.caption1)
             $0.textAlignment = .center
@@ -88,7 +88,7 @@ private extension HomeMemberScheduleCollectionViewCell {
     
     func setHierarchy() {
         memberPartTimeStackView.addArrangedSubviews(memberPartStartTimeLabel, memberPartMidLabel, memberPartEndTimeLabel)
-        addSubviews(memberNameLabel, memberScheduleType, memberPartTimeStackView)
+        addSubviews(memberNameLabel, memberScheduleTypeLabel, memberPartTimeStackView)
     }
     
     func setLayout() {
@@ -97,16 +97,16 @@ private extension HomeMemberScheduleCollectionViewCell {
             $0.leading.equalToSuperview().inset(16)
         }
         
-        memberScheduleType.snp.makeConstraints {
+        memberScheduleTypeLabel.snp.makeConstraints {
             $0.centerY.equalToSuperview()
             $0.trailing.equalToSuperview().inset(16)
             $0.width.equalTo(63)
-            $0.height.equalTo(SizeLiterals.Screen.screenHeight * 20 / 812)
+            $0.height.equalTo(20)
         }
         
         memberPartTimeStackView.snp.makeConstraints {
             $0.centerY.equalToSuperview()
-            $0.trailing.equalTo(memberScheduleType.snp.leading).offset(-63)
+            $0.trailing.equalTo(memberScheduleTypeLabel.snp.leading).offset(-63)
         }
     }
 }
@@ -117,21 +117,21 @@ extension HomeMemberScheduleCollectionViewCell {
         memberNameLabel.text = model.memberName
         memberPartStartTimeLabel.text = model.partStartTime
         memberPartEndTimeLabel.text = model.partEndTime
-        memberScheduleType.text = model.scheduleType
+        memberScheduleTypeLabel.text = model.scheduleType
         
         switch model.scheduleType {
         case "근무완료":
-            memberScheduleType.backgroundColor = .orange10
-            memberScheduleType.textColor = .orangeBara
+            memberScheduleTypeLabel.backgroundColor = .orange10
+            memberScheduleTypeLabel.textColor = .orangeBara
         case "근무중":
-            memberScheduleType.backgroundColor = .orangeBara
-            memberScheduleType.textColor = .whiteBara
+            memberScheduleTypeLabel.backgroundColor = .orangeBara
+            memberScheduleTypeLabel.textColor = .whiteBara
         case "근무예정":
-            memberScheduleType.backgroundColor = .gray1
-            memberScheduleType.textColor = .gray3
+            memberScheduleTypeLabel.backgroundColor = .gray1
+            memberScheduleTypeLabel.textColor = .gray3
         case "결근":
-            memberScheduleType.backgroundColor = .errorBara
-            memberScheduleType.textColor = .whiteBara
+            memberScheduleTypeLabel.backgroundColor = .errorBara
+            memberScheduleTypeLabel.textColor = .whiteBara
         default:
             break
         }

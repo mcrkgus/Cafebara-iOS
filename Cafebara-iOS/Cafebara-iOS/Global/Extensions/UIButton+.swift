@@ -17,12 +17,6 @@ extension UIButton {
         layer.borderColor = borderColor.cgColor
     }
     
-    func makeButtonRound(cornerRadius: CGFloat, borderWidth: CGFloat) {
-        layer.masksToBounds = true
-        layer.cornerRadius = cornerRadius
-        layer.borderWidth = borderWidth
-    }
-    
     func setBackgroundColor(_ color: UIColor, for state: UIControl.State) {
         let minimumSize: CGSize = CGSize(width: 1.0, height: 1.0)
         

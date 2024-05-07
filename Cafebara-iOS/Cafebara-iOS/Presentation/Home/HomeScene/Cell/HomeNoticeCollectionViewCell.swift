@@ -18,10 +18,10 @@ final class HomeNoticeCollectionViewCell: UICollectionViewCell, UICollectionView
     
     // MARK: - UI Components
     
-    private let noticeIcon = UIImageView()
-    private let noticeChip = UILabel()
-    private let noticeTitle = UILabel()
-    private let noticeEmptyTitle = UILabel()
+    private let noticeIconImageView = UIImageView()
+    private let noticeChipLabel = UILabel()
+    private let noticeTitleLabel = UILabel()
+    private let noticeEmptyTitleLabel = UILabel()
     private let noticeMoreButton = UIButton()
     
     // MARK: - Life Cycles
@@ -51,7 +51,7 @@ private extension HomeNoticeCollectionViewCell {
     }
     
     func setStyle() {
-        noticeChip.do {
+        noticeChipLabel.do {
             $0.textColor = .whiteBara
             $0.textAlignment = .center
             $0.font = .fontBara(.caption2)
@@ -60,14 +60,14 @@ private extension HomeNoticeCollectionViewCell {
             $0.layer.cornerRadius = 8
         }
         
-        noticeTitle.do {
+        noticeTitleLabel.do {
             $0.textColor = .gray7
             $0.textAlignment = .left
             $0.font = .fontBara(.body4)
             $0.asLineHeight(.body4)
         }
         
-        noticeEmptyTitle.do {
+        noticeEmptyTitleLabel.do {
             $0.text = I18N.Home.noticeEmptyTitle
             $0.textColor = .gray3
             $0.textAlignment = .left
@@ -82,30 +82,30 @@ private extension HomeNoticeCollectionViewCell {
     }
     
     func setHierarchy() {
-        addSubviews(noticeIcon, noticeChip, noticeTitle, noticeEmptyTitle, noticeMoreButton)
+        addSubviews(noticeIconImageView, noticeChipLabel, noticeTitleLabel, noticeEmptyTitleLabel, noticeMoreButton)
     }
     
     func setLayout() {
-        noticeIcon.snp.makeConstraints {
+        noticeIconImageView.snp.makeConstraints {
             $0.leading.equalToSuperview().inset(12)
             $0.centerY.equalToSuperview()
             $0.size.equalTo(28)
         }
         
-        noticeChip.snp.makeConstraints {
+        noticeChipLabel.snp.makeConstraints {
             $0.top.equalToSuperview().inset(14)
-            $0.leading.equalTo(noticeIcon.snp.trailing).offset(12)
+            $0.leading.equalTo(noticeIconImageView.snp.trailing).offset(12)
             $0.width.equalTo(40)
             $0.height.equalTo(16)
         }
         
-        noticeTitle.snp.makeConstraints {
+        noticeTitleLabel.snp.makeConstraints {
             $0.bottom.equalToSuperview().inset(14)
-            $0.leading.equalTo(noticeChip.snp.leading)
+            $0.leading.equalTo(noticeChipLabel.snp.leading)
         }
         
-        noticeEmptyTitle.snp.makeConstraints {
-            $0.leading.equalTo(noticeIcon.snp.trailing).offset(12)
+        noticeEmptyTitleLabel.snp.makeConstraints {
+            $0.leading.equalTo(noticeIconImageView.snp.trailing).offset(12)
             $0.centerY.equalToSuperview()
         }
         
@@ -121,16 +121,16 @@ extension HomeNoticeCollectionViewCell {
 
     func configureCell(model: CafeNoticeDto) {
         self.setStyle()
-        noticeTitle.text = model.noticeTitle
-        noticeChip.text = model.noticeType
+        noticeTitleLabel.text = model.noticeTitle
+        noticeChipLabel.text = model.noticeType
         
         switch model.noticeType {
         case "일반":
-            noticeIcon.image = .icNoticeDarkgray
-            noticeChip.backgroundColor = .gray2
+            noticeIconImageView.image = .icNoticeDarkgray
+            noticeChipLabel.backgroundColor = .gray2
         case "필독":
-            noticeIcon.image = .icNoticeOrange
-            noticeChip.backgroundColor = .orangeBara
+            noticeIconImageView.image = .icNoticeOrange
+            noticeChipLabel.backgroundColor = .orangeBara
         default:
             break
         }
