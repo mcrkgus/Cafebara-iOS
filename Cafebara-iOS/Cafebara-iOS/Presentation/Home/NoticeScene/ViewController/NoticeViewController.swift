@@ -14,11 +14,12 @@ final class NoticeViewController: UIViewController {
     
     // MARK: - UI Components
     
+    private let noticeView = NoticeView()
     
     // MARK: - Life Cycles
     
     override func loadView() {
-        
+        view = noticeView
     }
     
     override func viewDidLoad() {
@@ -35,7 +36,7 @@ final class NoticeViewController: UIViewController {
 extension NoticeViewController {
 
     func setUI() {
-        
+        self.navigationController?.navigationBar.isHidden = true
     }
 
     func bindViewModel() {
