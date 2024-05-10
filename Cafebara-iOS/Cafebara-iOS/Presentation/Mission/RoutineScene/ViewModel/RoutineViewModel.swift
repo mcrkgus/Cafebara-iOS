@@ -12,12 +12,13 @@ import RxSwift
 import RxRelay
 
 protocol RoutineViewModelInputs {
+    func isEditMode(bool: Bool)
 }
 
 protocol RoutineViewModelOutputs {
     var routineInfo: BehaviorSubject<[SectionOfRoutine]> { get }
     var routineKeywordInfo: BehaviorSubject<[RoutineKeywordInfo]> { get }
-    var routineKeywordCollectionViewHeight: PublishRelay<Int> { get }
+    var modifyRoutineKeywordInfo: BehaviorSubject<RoutineInfo?> { get }
 }
 
 protocol RoutineViewModelType {
@@ -32,12 +33,17 @@ final class RoutineViewModel: RoutineViewModelInputs, RoutineViewModelOutputs, R
     
     private let disposeBag = DisposeBag()
     
+    var isEditing: Bool = false
+    
     // input
+    func isEditMode(bool: Bool) {
+        isEditing = bool
+    }
     
     // output
     var routineInfo = BehaviorSubject<[SectionOfRoutine]>(value: [])
     var routineKeywordInfo = BehaviorSubject<[RoutineKeywordInfo]>(value: [])
-    var routineKeywordCollectionViewHeight = PublishRelay<Int>()
+    var modifyRoutineKeywordInfo = BehaviorSubject<RoutineInfo?>(value: nil)
     
     init() {
         let routineInfoDTO: [RoutineInfo] = [
