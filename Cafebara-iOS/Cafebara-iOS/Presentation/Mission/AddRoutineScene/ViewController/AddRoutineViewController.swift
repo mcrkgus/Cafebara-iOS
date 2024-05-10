@@ -70,6 +70,22 @@ extension AddRoutineViewController {
             }
             .disposed(by: disposeBag)
         
+        addRoutineView.routineKeyworkCollectionView.rx.itemSelected
+            .bind { [weak self] indexPath in
+                guard let self = self else { return }
+                let cell = RoutineKeywordCollectionViewCell.dequeueReusableCell(collectionView: self.addRoutineView.routineKeyworkCollectionView, indexPath: indexPath)
+                cell.isSelected = true
+            }
+            .disposed(by: disposeBag)
+        
+        addRoutineView.routineKeyworkCollectionView.rx.itemDeselected
+            .bind { [weak self] indexPath in
+                guard let self = self else { return }
+                let cell = RoutineKeywordCollectionViewCell.dequeueReusableCell(collectionView: self.addRoutineView.routineKeyworkCollectionView, indexPath: indexPath)
+                cell.isSelected = false
+            }
+            .disposed(by: disposeBag)
+        
         addRoutineView.routineTodoTextView.rx.didBeginEditing
             .bind { [weak self] _ in
                 guard let self = self else { return }
