@@ -129,7 +129,7 @@ extension AddRoutineViewController {
         Observable.combineLatest(addRoutineView.routineTodoTextView.rx.text.orEmpty, addRoutineView.routineKeyworkCollectionView.rx.itemSelected) { (text, indexPath) in
             return (text, indexPath)
         }
-        .bind { [weak self] (text, indexPath) in
+        .bind { [weak self] (text, _) in
             guard let self = self else { return }
             if self.addRoutineView.routineTodoTextView.textColor == .gray7 && !text.isEmpty {
                 self.addRoutineView.changeButton.isEnabled = true
@@ -138,6 +138,19 @@ extension AddRoutineViewController {
             }
         }
         .disposed(by: disposeBag)
+        
+        if viewModel.isEditing {
+            self.addRoutineView.changeButton.setTitle(I18N.AddRoutine.changeModifyButtonTitle, for: .normal)
+            self.addRoutineView.routineTodoTextView.textColor = .gray7
+            self.addRoutineView.routineTodoTextView.layer.borderColor = UIColor.gray5.cgColor
+            viewModel.outputs.modifyRoutineKeywordInfo
+                .bind { [weak self] info in
+                    guard let self = self else { return }
+                    guard let info = info else { return }
+                    self.addRoutineView.routineTodoTextView.text = info.routineExplain
+                }
+                .disposed(by: disposeBag)
+        }
     }
     
     func setGesture() {
