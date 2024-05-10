@@ -125,6 +125,19 @@ extension AddRoutineViewController {
                 }
             })
             .disposed(by: disposeBag)
+        
+        Observable.combineLatest(addRoutineView.routineTodoTextView.rx.text.orEmpty, addRoutineView.routineKeyworkCollectionView.rx.itemSelected) { (text, indexPath) in
+            return (text, indexPath)
+        }
+        .bind { [weak self] (text, indexPath) in
+            guard let self = self else { return }
+            if self.addRoutineView.routineTodoTextView.textColor == .gray7 && !text.isEmpty {
+                self.addRoutineView.changeButton.isEnabled = true
+            } else {
+                self.addRoutineView.changeButton.isEnabled = false
+            }
+        }
+        .disposed(by: disposeBag)
     }
     
     func setGesture() {
