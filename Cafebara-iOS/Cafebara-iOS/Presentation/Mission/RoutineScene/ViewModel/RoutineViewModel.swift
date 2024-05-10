@@ -59,7 +59,7 @@ final class RoutineViewModel: RoutineViewModelInputs, RoutineViewModelOutputs, R
             RoutineKeywordInfo(routineKeyword: "마감", routineKeywordTextColor: "#D14892", routineKeywordBackColor: "#FFF3FD"),
             RoutineKeywordInfo(routineKeyword: "오픈오픈오픈", routineKeywordTextColor: "#7827C9", routineKeywordBackColor: "#F6F1FD"),
             RoutineKeywordInfo(routineKeyword: "미들미들미들", routineKeywordTextColor: "#FF4F4F", routineKeywordBackColor: "#FFF3F3"),
-            RoutineKeywordInfo(routineKeyword: I18N.AddRoutine.addRoutineKeywordLabel, routineKeywordTextColor: "#FF4F4F", routineKeywordBackColor: "#FFF3F3")
+            RoutineKeywordInfo(routineKeyword: "새로 추가하기", routineKeywordTextColor: "", routineKeywordBackColor: "")
         ]
         routineKeywordInfo.onNext(routineKeywordInfoDTO)
     }
