@@ -21,6 +21,21 @@ final class RoutineKeywordCollectionViewCell: UICollectionViewCell, UICollection
         case add
     }
     
+    override var isSelected: Bool {
+        didSet {
+            if isSelected {
+                routineKeywordLabel.textColor = routineKeywordLabelBackgroundColor
+                routineKeywordLabel.backgroundColor = routineKeywordLabelTextColor
+            } else {
+                routineKeywordLabel.textColor = routineKeywordLabelTextColor
+                routineKeywordLabel.backgroundColor = routineKeywordLabelBackgroundColor
+            }
+        }
+    }
+    
+    private var routineKeywordLabelTextColor: UIColor?
+    private var routineKeywordLabelBackgroundColor: UIColor?
+    
     // MARK: - UI Components
     
     private let backGroundView = UIView()
@@ -118,9 +133,10 @@ private extension RoutineKeywordCollectionViewCell {
 extension RoutineKeywordCollectionViewCell {
     
     func configureCell(data: RoutineKeywordInfo) {
-        
         if data.routineKeyword.count < 7 {
             routineKeywordLabel.text = data.routineKeyword
+            routineKeywordLabelTextColor = UIColor(hex: data.routineKeywordTextColor)
+            routineKeywordLabelBackgroundColor = UIColor(hex: data.routineKeywordBackColor)
             routineKeywordLabel.textColor = UIColor(hex: data.routineKeywordTextColor)
             routineKeywordLabel.backgroundColor = UIColor(hex: data.routineKeywordBackColor)
             setHierarchy(type: .add)
