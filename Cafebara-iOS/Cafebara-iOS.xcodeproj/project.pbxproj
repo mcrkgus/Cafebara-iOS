@@ -81,7 +81,6 @@
 		A4BA86EE2BC3ADF00078FC4B /* CafeAllDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BA86ED2BC3ADF00078FC4B /* CafeAllDto.swift */; };
 		A4BA86F12BC40ECB0078FC4B /* HomeNoticeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BA86F02BC40ECB0078FC4B /* HomeNoticeCollectionViewCell.swift */; };
 		A4BA86F32BC411210078FC4B /* CafeNoticeDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BA86F22BC411210078FC4B /* CafeNoticeDto.swift */; };
-		A4BA86F52BC427720078FC4B /* ScheduleMyDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BA86F42BC427720078FC4B /* ScheduleMyDto.swift */; };
 		A4BA870B2BCCD52E0078FC4B /* HomeMemberScheduleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BA870A2BCCD52E0078FC4B /* HomeMemberScheduleCollectionViewCell.swift */; };
 		A4BA870D2BCCD5460078FC4B /* MemberScheduleDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BA870C2BCCD5460078FC4B /* MemberScheduleDto.swift */; };
 		E58624222BC7B3EE004829AB /* AuthTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58624212BC7B3EE004829AB /* AuthTarget.swift */; };
@@ -115,6 +114,7 @@
 		F1F179A62BCE8D2500292D91 /* RoutineKeywordInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F179A52BCE8D2500292D91 /* RoutineKeywordInfo.swift */; };
 		F1F179AA2BCE8E1B00292D91 /* RoutineKeywordCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F179A92BCE8E1B00292D91 /* RoutineKeywordCollectionViewCell.swift */; };
 		F1F179B12BD0008800292D91 /* LeftAlignedCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F179B02BD0008800292D91 /* LeftAlignedCollectionViewFlowLayout.swift */; };
+		F1F17A1B2BF2328800292D91 /* ScheduleMyDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F17A1A2BF2328800292D91 /* ScheduleMyDto.swift */; };
 		F1FD4F8E2BB5878D009C3050 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FD4F8D2BB5878D009C3050 /* LoginViewController.swift */; };
 		F1FD4F932BB58841009C3050 /* CustomDropDownTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FD4F922BB58841009C3050 /* CustomDropDownTableViewCell.swift */; };
 		F1FD4F952BB58857009C3050 /* CustomDropDownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FD4F942BB58857009C3050 /* CustomDropDownView.swift */; };
@@ -185,7 +185,6 @@
 		A4BA86ED2BC3ADF00078FC4B /* CafeAllDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeAllDto.swift; sourceTree = "<group>"; };
 		A4BA86F02BC40ECB0078FC4B /* HomeNoticeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNoticeCollectionViewCell.swift; sourceTree = "<group>"; };
 		A4BA86F22BC411210078FC4B /* CafeNoticeDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeNoticeDto.swift; sourceTree = "<group>"; };
-		A4BA86F42BC427720078FC4B /* ScheduleMyDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ScheduleMyDto.swift; path = ../../../../../../../Downloads/ScheduleMyDto.swift; sourceTree = "<group>"; };
 		A4BA870A2BCCD52E0078FC4B /* HomeMemberScheduleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMemberScheduleCollectionViewCell.swift; sourceTree = "<group>"; };
 		A4BA870C2BCCD5460078FC4B /* MemberScheduleDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberScheduleDto.swift; sourceTree = "<group>"; };
 		E58624212BC7B3EE004829AB /* AuthTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTarget.swift; sourceTree = "<group>"; };
@@ -217,6 +216,7 @@
 		F1F179A52BCE8D2500292D91 /* RoutineKeywordInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineKeywordInfo.swift; sourceTree = "<group>"; };
 		F1F179A92BCE8E1B00292D91 /* RoutineKeywordCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineKeywordCollectionViewCell.swift; sourceTree = "<group>"; };
 		F1F179B02BD0008800292D91 /* LeftAlignedCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftAlignedCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
+		F1F17A1A2BF2328800292D91 /* ScheduleMyDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleMyDto.swift; sourceTree = "<group>"; };
 		F1FD4F8D2BB5878D009C3050 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F1FD4F922BB58841009C3050 /* CustomDropDownTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDropDownTableViewCell.swift; sourceTree = "<group>"; };
 		F1FD4F942BB58857009C3050 /* CustomDropDownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDropDownView.swift; sourceTree = "<group>"; };
@@ -710,7 +710,7 @@
 				A4BA86E92BC3A9090078FC4B /* MemberMyDto.swift */,
 				A4BA86ED2BC3ADF00078FC4B /* CafeAllDto.swift */,
 				A4BA86F22BC411210078FC4B /* CafeNoticeDto.swift */,
-				A4BA86F42BC427720078FC4B /* ScheduleMyDto.swift */,
+				F1F17A1A2BF2328800292D91 /* ScheduleMyDto.swift */,
 				A4BA870C2BCCD5460078FC4B /* MemberScheduleDto.swift */,
 			);
 			path = Home;
@@ -1174,7 +1174,7 @@
 				833DC8062B874D9A0096703B /* NSObject+.swift in Sources */,
 				8304715C2B87BBEB005AEEB4 /* UITextField+.swift in Sources */,
 				A43C73F42B90513900B39F21 /* Config.swift in Sources */,
-				A4BA86F52BC427720078FC4B /* ScheduleMyDto.swift in Sources */,
+				F1F17A1B2BF2328800292D91 /* ScheduleMyDto.swift in Sources */,
 				A43C73F82B90515D00B39F21 /* NetworkLoggerPlugin.swift in Sources */,
 				A43B232D2BA6A44600E15CC3 /* StoreInputViewController.swift in Sources */,
 				F13062922BA991EA00E5B680 /* MyWorkInfo.swift in Sources */,
