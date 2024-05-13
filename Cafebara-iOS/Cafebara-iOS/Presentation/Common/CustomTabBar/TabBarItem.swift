@@ -63,7 +63,7 @@ enum TabBarItem: CaseIterable {
     var targetViewController: UIViewController {
         switch self {
         case .home: 
-            return MyWorkViewController()
+            return ViewController()
         case .todo:
             return UserDefaults.standard.bool(forKey: "isOwner") ? MissionViewController() : ViewController()
         case .schedule:
