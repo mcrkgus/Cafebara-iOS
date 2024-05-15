@@ -167,7 +167,4 @@ extension AddRoutineViewController {
             }
             .disposed(by: disposeBag)
     }
-    
-    func setDelegate() {
-    }
 }
