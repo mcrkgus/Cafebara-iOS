@@ -34,7 +34,6 @@ final class NoticeViewController: UIViewController {
         
         setUI()
         bindViewModel()
-        setDelegate()
     }
 }
 

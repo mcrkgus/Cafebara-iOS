@@ -11,6 +11,9 @@ import SnapKit
 import Then
 
 final class NoticeView: UIView {
+    
+    // MARK: - Properties
+    private var noticeData: [NoticeInfo] = []
 
     // MARK: - UI Components
     
@@ -29,6 +32,7 @@ final class NoticeView: UIView {
         setStyle()
         setHierarchy()
         setLayout()
+        updateCollectionView()
         setRegisterCell()
     }
     
@@ -122,6 +126,12 @@ private extension NoticeView {
             $0.leading.trailing.bottom.equalToSuperview()
             $0.bottom.equalToSuperview()
         }
+    }
+    
+    func updateCollectionView() {
+        noticeCollectionView.isHidden = noticeData.isEmpty
+        noNoticeImage.isHidden = !noticeData.isEmpty
+        noNoticeLabel.isHidden = !noticeData.isEmpty
     }
     
     func setRegisterCell() {
