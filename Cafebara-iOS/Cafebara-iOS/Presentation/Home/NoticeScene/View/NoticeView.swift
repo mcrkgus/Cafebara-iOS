@@ -12,15 +12,11 @@ import Then
 
 final class NoticeView: UIView {
 
-    // MARK: - Properties
-    var isOnwer = false
-    
     // MARK: - UI Components
     
-    private let navigationBar = CustomNavigationView()
+    let navigationBar = CustomNavigationView()
     private let noticeTitleLabel = UILabel()
-    private let ownerNoticeCollectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
-    private let staffNoticeCollectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
+    let noticeCollectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
     private let noNoticeImage = UIImageView()
     private let noNoticeLabel = UILabel()
     
@@ -47,10 +43,12 @@ final class NoticeView: UIView {
 private extension NoticeView {
 
     func setUI() {
+        
         backgroundColor = .backgroundBara
     }
 
     func setStyle() {
+        
         navigationBar.do {
             $0.isTitleLabelIncluded = true
             $0.isBackButtonIncluded = true
@@ -65,11 +63,24 @@ private extension NoticeView {
             $0.asLineHeight(.heading)
         }
         
+        noticeCollectionView.do {
+            let layout = UICollectionViewFlowLayout()
+            layout.minimumInteritemSpacing = 0
+            layout.minimumLineSpacing = 0
+            layout.scrollDirection = .vertical
+            layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
+            layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 1, right: 0)
+            layout.collectionView?.isScrollEnabled = true
+            $0.collectionViewLayout = layout
+            $0.showsVerticalScrollIndicator = false
+            $0.backgroundColor = .clear
+        }
+        
         noNoticeImage.do {
             $0.image = UIImage(resource: .notice)
             //TODO: 추후 이미지 수정 예정
             $0.contentMode = .scaleAspectFit
-            $0.isHidden = false
+            $0.isHidden = true
         }
         
         noNoticeLabel.do {
@@ -77,17 +88,20 @@ private extension NoticeView {
             $0.font = .fontBara(.body1)
             $0.asLineHeight(.body1)
             $0.textColor = .gray4
-            $0.isHidden = false
+            $0.isHidden = true
         }
     }
     
     func setHierarchy() {
+        
         addSubviews(navigationBar,
+                    noticeCollectionView,
                     noNoticeImage,
                     noNoticeLabel)
     }
     
     func setLayout() {
+        
         navigationBar.snp.makeConstraints {
             $0.leading.trailing.equalToSuperview()
             $0.top.equalTo(safeAreaLayoutGuide)
@@ -102,16 +116,16 @@ private extension NoticeView {
             $0.centerX.equalToSuperview()
             $0.top.equalTo(noNoticeImage.snp.bottom).offset(SizeLiterals.Screen.screenHeight * 24 / 667)
         }
+        
+        noticeCollectionView.snp.makeConstraints {
+            $0.top.equalTo(navigationBar.snp.bottom)
+            $0.leading.trailing.bottom.equalToSuperview()
+            $0.bottom.equalToSuperview()
+        }
     }
     
     func setRegisterCell() {
         
-    }
-}
-
-extension NoticeView {
-
-    func configureView() {
-        
+        NoticeCollectionViewCell.register(target: noticeCollectionView)
     }
 }
