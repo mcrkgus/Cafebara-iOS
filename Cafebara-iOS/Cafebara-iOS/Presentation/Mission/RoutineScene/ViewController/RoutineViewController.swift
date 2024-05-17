@@ -73,10 +73,30 @@ extension RoutineViewController {
             },
             configureSupplementaryView: { (_, collectionView, _, indexPath) in
                 let headerView = RoutineCollectionHeaderView.dequeueReusableHeaderView(collectionView: collectionView, indexPath: indexPath)
+                headerView.addRoutineView.rx.tapGesture()
+                    .when(.recognized)
+                    .bind { [weak self] _ in
+                        guard let self = self else { return }
+                        viewModel.inputs.isEditMode(bool: false)
+                        self.navigationController?.pushViewController(AddRoutineViewController(viewModel: viewModel), animated: true)
+                    }
+                    .disposed(by: self.disposeBag)
                 
                 return headerView
             }
         )
+        
+        routineView.routineCollectionView.rx.itemSelected
+            .map { indexPath in
+                return dataSource[indexPath]
+            }
+            .subscribe(onNext: { [weak self] item in
+                guard let self = self else { return }
+                self.viewModel.modifyRoutineKeywordInfo.onNext(item)
+                viewModel.inputs.isEditMode(bool: true)
+                self.navigationController?.pushViewController(AddRoutineViewController(viewModel: viewModel), animated: true)
+            })
+            .disposed(by: disposeBag)
         
         viewModel.outputs.routineInfo
             .bind(to: routineView.routineCollectionView.rx.items(dataSource: dataSource))
