@@ -41,7 +41,6 @@ final class AddRoutineViewController: UIViewController {
         
         setUI()
         bindViewModel()
-        setDelegate()
         setGesture()
     }
     

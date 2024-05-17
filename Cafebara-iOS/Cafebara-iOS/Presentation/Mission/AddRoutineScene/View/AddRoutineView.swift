@@ -140,7 +140,7 @@ private extension AddRoutineView {
     func setLayout() {
         navigationBar.snp.makeConstraints {
             $0.top.equalTo(safeAreaLayoutGuide)
-            $0.leading.trailing.equalToSuperview()
+            $0.horizontalEdges.equalToSuperview()
         }
         
         workTitleLabel.snp.makeConstraints {
