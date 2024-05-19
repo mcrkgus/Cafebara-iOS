@@ -40,7 +40,7 @@ final class NoticeViewController: UIViewController {
 // MARK: - Extensions
 
 extension NoticeViewController {
-
+    
     func setUI() {
         
         self.navigationController?.navigationBar.isHidden = true
@@ -48,7 +48,7 @@ extension NoticeViewController {
             self.navigationController?.popViewController(animated: true)
         }
     }
-
+    
     func bindViewModel() {
         
         viewModel.outputs.noticeInfoData
@@ -57,6 +57,17 @@ extension NoticeViewController {
                        cellType: NoticeCollectionViewCell.self)) { (_, model, cell) in
                 cell.configureCell(data: model)
             }
+                       .disposed(by: disposeBag)
+        
+        viewModel.outputs.noticeInfoData
+            .observe(on: MainScheduler.instance)
+            .subscribe(onNext: { [weak self] data in
+                if data.isEmpty {
+                    self?.noticeView.emptyNotice()
+                } else {
+                    self?.noticeView.updateCollectionView()
+                }
+            })
             .disposed(by: disposeBag)
     }
 }

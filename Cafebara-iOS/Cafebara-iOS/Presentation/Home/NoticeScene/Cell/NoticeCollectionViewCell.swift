@@ -16,17 +16,16 @@ final class NoticeCollectionViewCell: UICollectionViewCell, UICollectionViewRegi
     // MARK: - Properties
     
     static let isFromNib: Bool = false
-    var isOwner: Bool = true
+    var isOwner: Bool = false
     var disposeBag = DisposeBag()
     
     // MARK: - UI Components
     
-    let contentsView = UIView()
-    let noticeLabel = UILabel()
-    let noticeDateLabel = UILabel()
-    let calenderIcon = UIImageView()
-    let noticeIcon = UIImageView()
-    let dividerLine = UIView()
+    private let contentsView = UIView()
+    private let noticeLabel = UILabel()
+    private let noticeDateLabel = UILabel()
+    private let noticeIcon = UIImageView()
+    private let dividerLine = UIView()
     
     // MARK: - Life Cycles
     
@@ -58,7 +57,6 @@ private extension NoticeCollectionViewCell {
     }
     
     func setStyle() {
-        
         contentsView.do {
             $0.backgroundColor = .clear
         }
@@ -86,12 +84,6 @@ private extension NoticeCollectionViewCell {
             $0.textColor = .gray3
         }
         
-        calenderIcon.do {
-            $0.image = .icCalenderBlue
-            $0.contentMode = .scaleAspectFit
-            $0.isHidden = true
-        }
-        
         noticeIcon.do {
             $0.image = .icNoticeOrange
             $0.contentMode = .scaleAspectFit
@@ -104,27 +96,19 @@ private extension NoticeCollectionViewCell {
     }
     
     func setHierarchy() {
-        
         addSubviews(contentsView)
         contentsView.addSubviews(noticeIcon,
-                    calenderIcon,
                     noticeLabel,
                     noticeDateLabel,
                     dividerLine)
     }
     
     func setLayout() {
-        
         contentsView.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }
         
         noticeIcon.snp.makeConstraints {
-            $0.top.equalToSuperview().inset(24)
-            $0.leading.equalToSuperview().inset(20)
-        }
-        
-        calenderIcon.snp.makeConstraints {
             $0.top.equalToSuperview().inset(24)
             $0.leading.equalToSuperview().inset(20)
         }
@@ -154,19 +138,16 @@ extension NoticeCollectionViewCell {
     
     func configureCell(data: NoticeInfo) {
         if isOwner {
-            noticeIcon.isHidden = true
-            calenderIcon.isHidden = false
+            noticeIcon.image = .icNoticeOrange
         }
         else {
             noticeDateLabel.text = convertToDateStr(dateComponents: data.date)
             if data.noticeType == "a" {
                 noticeLabel.text = I18N.Notice.Staff.ownerNoticeLabel
-                noticeIcon.isHidden = false
-                calenderIcon.isHidden = true
+                noticeIcon.image = .icNoticeOrange
             } else  if data.noticeType == "b" {
                 noticeLabel.text = data.staffName + I18N.Notice.Staff.acceptionNoticeLabel
-                noticeIcon.isHidden = true
-                calenderIcon.isHidden = false
+                noticeIcon.image = .icCalenderBlue
             }
         }
     }
@@ -188,7 +169,4 @@ func convertToDateStr(dateComponents: [Int]) -> String? {
     } else {
         return nil
     }
-}
-
-extension NoticeCollectionViewCell {
 }

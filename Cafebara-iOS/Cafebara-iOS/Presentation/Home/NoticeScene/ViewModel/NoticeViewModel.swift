@@ -15,18 +15,15 @@ protocol NoticeViewModelInputs {
 }
 
 protocol NoticeViewModelOutputs {
-    
     var noticeInfoData: BehaviorRelay<[NoticeInfo]> { get }
 }
 
 protocol NoticeViewModelType {
-    
     var inputs: NoticeViewModelInputs { get }
     var outputs: NoticeViewModelOutputs { get }
 }
 
 final class NoticeViewModel: NoticeViewModelInputs, NoticeViewModelOutputs, NoticeViewModelType {
-    
     var inputs: NoticeViewModelInputs { return self }
     var outputs: NoticeViewModelOutputs { return self }
     

@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import Differentiator
 
 struct NoticeInfo: Codable {
     let staffName: String

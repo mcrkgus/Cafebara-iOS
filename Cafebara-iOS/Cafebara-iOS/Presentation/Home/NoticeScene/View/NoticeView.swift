@@ -11,9 +11,6 @@ import SnapKit
 import Then
 
 final class NoticeView: UIView {
-    
-    // MARK: - Properties
-    private var noticeData: [NoticeInfo] = []
 
     // MARK: - UI Components
     
@@ -32,7 +29,6 @@ final class NoticeView: UIView {
         setStyle()
         setHierarchy()
         setLayout()
-        updateCollectionView()
         setRegisterCell()
     }
     
@@ -44,15 +40,13 @@ final class NoticeView: UIView {
 
 // MARK: - Extensions
 
-private extension NoticeView {
+extension NoticeView {
 
     func setUI() {
-        
         backgroundColor = .backgroundBara
     }
 
     func setStyle() {
-        
         navigationBar.do {
             $0.isTitleLabelIncluded = true
             $0.isBackButtonIncluded = true
@@ -97,7 +91,6 @@ private extension NoticeView {
     }
     
     func setHierarchy() {
-        
         addSubviews(navigationBar,
                     noticeCollectionView,
                     noNoticeImage,
@@ -105,7 +98,6 @@ private extension NoticeView {
     }
     
     func setLayout() {
-        
         navigationBar.snp.makeConstraints {
             $0.leading.trailing.equalToSuperview()
             $0.top.equalTo(safeAreaLayoutGuide)
@@ -129,13 +121,18 @@ private extension NoticeView {
     }
     
     func updateCollectionView() {
-        noticeCollectionView.isHidden = noticeData.isEmpty
-        noNoticeImage.isHidden = !noticeData.isEmpty
-        noNoticeLabel.isHidden = !noticeData.isEmpty
+        noticeCollectionView.isHidden = false
+        noNoticeImage.isHidden = true
+        noNoticeLabel.isHidden = true
+    }
+    
+    func emptyNotice() {
+        noticeCollectionView.isHidden = true
+        noNoticeImage.isHidden = false
+        noNoticeLabel.isHidden = false
     }
     
     func setRegisterCell() {
-        
         NoticeCollectionViewCell.register(target: noticeCollectionView)
     }
 }
