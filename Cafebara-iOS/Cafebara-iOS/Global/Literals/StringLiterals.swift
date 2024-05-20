@@ -74,6 +74,22 @@ enum I18N {
         static let routineDeleteAlertTitle = "작성한 루틴을\n정말 삭제하실 건가요?"
     }
     
+    enum Notice {
+        static let noticeNavigationTitle = "알림"
+        static let noNoticeLabel = "아직 받은 알림이 없어요"
+        
+        enum Staff {
+            static let ownerNoticeLabel = "사장님이 공지사항을 등록했어요\n홈에서 확인해 보세요!"
+            static let askNoticeLabel = "님이 대타 요청 카드를 보냈어요!"
+            static let acceptionNoticeLabel = "님이 대타 요청을 수락했어요"
+            static let refuseNoticeLabel = "님이 대타 요청을 거절했어요"
+        }
+        
+        enum Owner {
+            static let scheduleChangeNotice = "근무 변동이 생겼어요\n스케줄에서 변경 사항을 확인해 보세요!"
+        }
+    }
+    
     enum Home {
         static let noticeEmptyTitle = "올라온 공지사항이 없어요."
         static let homeNavigationBarTitle = "홈"
