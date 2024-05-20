@@ -68,7 +68,7 @@ enum I18N {
     }
     
     enum Routine {
-        static let missionNavigationTitle = "루틴"
+        static let routineNavigationTitle = "루틴"
         static let noRoutineLabel = "아직 등록된 루틴이 없어요"
         static let addRoutineLabel = "추가"
         static let routineDeleteAlertTitle = "작성한 루틴을\n정말 삭제하실 건가요?"
@@ -88,5 +88,29 @@ enum I18N {
         enum Owner {
             static let scheduleChangeNotice = "근무 변동이 생겼어요\n스케줄에서 변경 사항을 확인해 보세요!"
         }
+    }
+    
+    enum Home {
+        static let noticeEmptyTitle = "올라온 공지사항이 없어요."
+        static let homeNavigationBarTitle = "홈"
+        static let noticeTitle = "공지사항"
+        static let noticeMoreButtonTitle = "더보기"
+        static let todoTitle = "오늘의 할 일"
+        static let todoCheckButtonTitle = "바로 확인하기"
+        static let memberTitle = "근무직원"
+        static let ownerHomeTitle = "사장님, 반가워요!\n카페바라와 함께 카페를 관리해 볼까요?"
+        static let staffHomeTitle = "님, 반가워요!\n카페바라와 함께 카페를 관리해 볼까요?"
+        static let staffMissionTitle = "님,\n사장님이 보낸 오늘의 미션이 도착했어요!"
+    }
+    
+    enum AddRoutine {
+        static let addRoutineNavigationTitle = "루틴 추가"
+        static let workTitleLabel = "근무 라벨"
+        static let workManualLabel = "우측 수정하기를 눌러 추가된 라벨을 수정해 보세요!"
+        static let routineCategoryLabel = "루틴 항목"
+        static let routineTodoTextViewPlaceholder = "해야할 일을 적어 주세요!"
+        static let changeAddButtonTitle = "추가하기"
+        static let changeModifyButtonTitle = "수정하기"
+        static let addRoutineKeywordLabel = "새로 추가하기"
     }
 }

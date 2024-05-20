@@ -12,10 +12,13 @@ import RxSwift
 import RxRelay
 
 protocol RoutineViewModelInputs {
+    func isEditMode(bool: Bool)
 }
 
 protocol RoutineViewModelOutputs {
     var routineInfo: BehaviorSubject<[SectionOfRoutine]> { get }
+    var routineKeywordInfo: BehaviorSubject<[RoutineKeywordInfo]> { get }
+    var modifyRoutineKeywordInfo: BehaviorSubject<RoutineInfo?> { get }
 }
 
 protocol RoutineViewModelType {
@@ -30,10 +33,17 @@ final class RoutineViewModel: RoutineViewModelInputs, RoutineViewModelOutputs, R
     
     private let disposeBag = DisposeBag()
     
+    var isEditing: Bool = false
+    
     // input
+    func isEditMode(bool: Bool) {
+        isEditing = bool
+    }
     
     // output
     var routineInfo = BehaviorSubject<[SectionOfRoutine]>(value: [])
+    var routineKeywordInfo = BehaviorSubject<[RoutineKeywordInfo]>(value: [])
+    var modifyRoutineKeywordInfo = BehaviorSubject<RoutineInfo?>(value: nil)
     
     init() {
         let routineInfoDTO: [RoutineInfo] = [
@@ -48,6 +58,16 @@ final class RoutineViewModel: RoutineViewModelInputs, RoutineViewModelOutputs, R
             RoutineInfo(routineKeyword: "미들", routineKeywordTextColor: "#FF4F4F", routineKeywordBackColor: "#FFF3F3", routineExplain: "미들에는 그냥 몰래몰래 쉬는거야~")
         ]
         routineInfo.onNext([SectionOfRoutine(items: routineInfoDTO)])
+        
+        let routineKeywordInfoDTO: [RoutineKeywordInfo] = [
+            RoutineKeywordInfo(routineKeyword: "오픈", routineKeywordTextColor: "#1F9BB6", routineKeywordBackColor: "#EAFBFA"),
+            RoutineKeywordInfo(routineKeyword: "미들", routineKeywordTextColor: "#6CB731", routineKeywordBackColor: "#F6FEF3"),
+            RoutineKeywordInfo(routineKeyword: "마감", routineKeywordTextColor: "#D14892", routineKeywordBackColor: "#FFF3FD"),
+            RoutineKeywordInfo(routineKeyword: "오픈오픈오픈", routineKeywordTextColor: "#7827C9", routineKeywordBackColor: "#F6F1FD"),
+            RoutineKeywordInfo(routineKeyword: "미들미들미들", routineKeywordTextColor: "#FF4F4F", routineKeywordBackColor: "#FFF3F3"),
+            RoutineKeywordInfo(routineKeyword: "새로 추가하기", routineKeywordTextColor: "", routineKeywordBackColor: "")
+        ]
+        routineKeywordInfo.onNext(routineKeywordInfoDTO)
     }
 }
 
