@@ -234,14 +234,12 @@ extension AttendanceView {
     }
     
     func updateStaus() {
+        startWorkButton.isHidden = isWorking
+        finishWorkButton.isHidden = !isWorking
         if isWorking {
-            startWorkButton.isHidden = true
-            finishWorkButton.isHidden = false
             statusLabel.text = I18N.Attendance.workingLabel
             statusLabel.textColor = .blueBara
         } else {
-            startWorkButton.isHidden = false
-            finishWorkButton.isHidden = true
             statusLabel.text = I18N.Attendance.beforeWorkLabel
             statusLabel.textColor = .gray3
         }
