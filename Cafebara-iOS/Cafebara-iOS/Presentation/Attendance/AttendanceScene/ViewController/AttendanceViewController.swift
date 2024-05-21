@@ -7,42 +7,58 @@
 
 import UIKit
 
+import RxCocoa
+import RxDataSources
+import RxSwift
+
 final class AttendanceViewController: UIViewController {
     
     // MARK: - Properties
     
+    private let disposeBag = DisposeBag()
     
     // MARK: - UI Components
     
+    private let attendanceView = AttendanceView()
     
     // MARK: - Life Cycles
     
     override func loadView() {
-        
+        view = attendanceView
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setUI()
-        bindViewModel()
-        setDelegate()
+        setGesture()
     }
 }
 
 // MARK: - Extensions
 
 extension AttendanceViewController {
-
+    
     func setUI() {
-        
-    }
-
-    func bindViewModel() {
-	
+        self.navigationController?.navigationBar.isHidden = true
     }
     
-    func setDelegate() {
+    private func setGesture() {
+        attendanceView.startWorkButton.rx.tap
+            .subscribe(onNext: { [weak self] in
+                self?.handleAttendanceButtonTap()
+            })
+            .disposed(by: disposeBag)
         
+        attendanceView.finishWorkButton.rx.tap
+            .subscribe(onNext: { [weak self] in
+                self?.handleAttendanceButtonTap()
+            })
+            .disposed(by: disposeBag)
+    }
+    
+    private func handleAttendanceButtonTap() {
+        attendanceView.isWorking.toggle()
+        attendanceView.updateStaus()
     }
 }
