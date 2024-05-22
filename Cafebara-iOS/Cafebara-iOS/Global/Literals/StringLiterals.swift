@@ -60,6 +60,15 @@ enum I18N {
         static let addAlertTitle = " 님께\n대타 요청을 보내실 건가요?"
     }
     
+    enum ReplacementWork {
+        static let replacementWorkTitle = "대타 요청을 받으실 건가요?"
+        static let replacementWorkDate = "근무날짜"
+        static let replacementWorkTime = "근무시간"
+        static let replacementSender = "근무자"
+        static let rejectButtonLabel = "거절할게요"
+        static let acceptButtonLabel = "수락할게요"
+    }
+    
     enum Mission {
         static let missionNavigationTitle = "미션"
         static let routineTitle = "반복되는 루틴을 추가해 보세요!"
