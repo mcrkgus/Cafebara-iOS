@@ -73,11 +73,6 @@
 		A488FBA52B9B616B004D4A09 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = A488FBA42B9B616B004D4A09 /* FSCalendar */; };
 		A488FBA82B9B6B8E004D4A09 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A488FBA72B9B6B8E004D4A09 /* CustomButton.swift */; };
 		A488FBAB2B9B81AB004D4A09 /* CustomToastMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A488FBAA2B9B81AB004D4A09 /* CustomToastMessage.swift */; };
-		E56EB89E2BEB24EA00DF9DDD /* NoticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56EB89D2BEB24EA00DF9DDD /* NoticeView.swift */; };
-		E56EB8A02BEB253C00DF9DDD /* NoticeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56EB89F2BEB253C00DF9DDD /* NoticeViewModel.swift */; };
-		E56EB8A22BEB255000DF9DDD /* NoticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56EB8A12BEB255000DF9DDD /* NoticeViewController.swift */; };
-		E56EB8A42BEB255E00DF9DDD /* NoticeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56EB8A32BEB255E00DF9DDD /* NoticeCollectionViewCell.swift */; };
-		E56EB8A62BEB256B00DF9DDD /* NoticeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56EB8A52BEB256B00DF9DDD /* NoticeInfo.swift */; };
 		A4BA86E22BC39F930078FC4B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BA86E12BC39F930078FC4B /* HomeViewController.swift */; };
 		A4BA86E42BC39FAE0078FC4B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BA86E32BC39FAE0078FC4B /* HomeView.swift */; };
 		A4BA86E72BC3A0170078FC4B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BA86E62BC3A0170078FC4B /* ViewController.swift */; };
@@ -88,6 +83,14 @@
 		A4BA86F32BC411210078FC4B /* CafeNoticeDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BA86F22BC411210078FC4B /* CafeNoticeDto.swift */; };
 		A4BA870B2BCCD52E0078FC4B /* HomeMemberScheduleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BA870A2BCCD52E0078FC4B /* HomeMemberScheduleCollectionViewCell.swift */; };
 		A4BA870D2BCCD5460078FC4B /* MemberScheduleDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BA870C2BCCD5460078FC4B /* MemberScheduleDto.swift */; };
+		E56922362BFDAD160050C3E1 /* scheduleReplacementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56922352BFDAD160050C3E1 /* scheduleReplacementView.swift */; };
+		E569223C2BFDAD680050C3E1 /* scheduleReplacementViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E569223B2BFDAD680050C3E1 /* scheduleReplacementViewModel.swift */; };
+		E569223E2BFDAD760050C3E1 /* scheduleReplacementInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E569223D2BFDAD760050C3E1 /* scheduleReplacementInfo.swift */; };
+		E56EB89E2BEB24EA00DF9DDD /* NoticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56EB89D2BEB24EA00DF9DDD /* NoticeView.swift */; };
+		E56EB8A02BEB253C00DF9DDD /* NoticeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56EB89F2BEB253C00DF9DDD /* NoticeViewModel.swift */; };
+		E56EB8A22BEB255000DF9DDD /* NoticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56EB8A12BEB255000DF9DDD /* NoticeViewController.swift */; };
+		E56EB8A42BEB255E00DF9DDD /* NoticeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56EB8A32BEB255E00DF9DDD /* NoticeCollectionViewCell.swift */; };
+		E56EB8A62BEB256B00DF9DDD /* NoticeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56EB8A52BEB256B00DF9DDD /* NoticeInfo.swift */; };
 		E58624222BC7B3EE004829AB /* AuthTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58624212BC7B3EE004829AB /* AuthTarget.swift */; };
 		E58624242BC7B43D004829AB /* AuthAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58624232BC7B43D004829AB /* AuthAPI.swift */; };
 		E58624262BC7B454004829AB /* BaraProviders.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58624252BC7B454004829AB /* BaraProviders.swift */; };
@@ -182,11 +185,6 @@
 		A488FB532B9B10FB004D4A09 /* CustomAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertView.swift; sourceTree = "<group>"; };
 		A488FBA72B9B6B8E004D4A09 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		A488FBAA2B9B81AB004D4A09 /* CustomToastMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomToastMessage.swift; sourceTree = "<group>"; };
-		E56EB89D2BEB24EA00DF9DDD /* NoticeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeView.swift; sourceTree = "<group>"; };
-		E56EB89F2BEB253C00DF9DDD /* NoticeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeViewModel.swift; sourceTree = "<group>"; };
-		E56EB8A12BEB255000DF9DDD /* NoticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeViewController.swift; sourceTree = "<group>"; };
-		E56EB8A32BEB255E00DF9DDD /* NoticeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeCollectionViewCell.swift; sourceTree = "<group>"; };
-		E56EB8A52BEB256B00DF9DDD /* NoticeInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeInfo.swift; sourceTree = "<group>"; };
 		A4BA86E12BC39F930078FC4B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		A4BA86E32BC39FAE0078FC4B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		A4BA86E62BC3A0170078FC4B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -197,6 +195,14 @@
 		A4BA86F22BC411210078FC4B /* CafeNoticeDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeNoticeDto.swift; sourceTree = "<group>"; };
 		A4BA870A2BCCD52E0078FC4B /* HomeMemberScheduleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMemberScheduleCollectionViewCell.swift; sourceTree = "<group>"; };
 		A4BA870C2BCCD5460078FC4B /* MemberScheduleDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberScheduleDto.swift; sourceTree = "<group>"; };
+		E56922352BFDAD160050C3E1 /* scheduleReplacementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = scheduleReplacementView.swift; sourceTree = "<group>"; };
+		E569223B2BFDAD680050C3E1 /* scheduleReplacementViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = scheduleReplacementViewModel.swift; sourceTree = "<group>"; };
+		E569223D2BFDAD760050C3E1 /* scheduleReplacementInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = scheduleReplacementInfo.swift; sourceTree = "<group>"; };
+		E56EB89D2BEB24EA00DF9DDD /* NoticeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeView.swift; sourceTree = "<group>"; };
+		E56EB89F2BEB253C00DF9DDD /* NoticeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeViewModel.swift; sourceTree = "<group>"; };
+		E56EB8A12BEB255000DF9DDD /* NoticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeViewController.swift; sourceTree = "<group>"; };
+		E56EB8A32BEB255E00DF9DDD /* NoticeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeCollectionViewCell.swift; sourceTree = "<group>"; };
+		E56EB8A52BEB256B00DF9DDD /* NoticeInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeInfo.swift; sourceTree = "<group>"; };
 		E58624212BC7B3EE004829AB /* AuthTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTarget.swift; sourceTree = "<group>"; };
 		E58624232BC7B43D004829AB /* AuthAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthAPI.swift; sourceTree = "<group>"; };
 		E58624252BC7B454004829AB /* BaraProviders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaraProviders.swift; sourceTree = "<group>"; };
@@ -294,6 +300,7 @@
 		833DC7F22B874C030096703B /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				E569222E2BFDAC9A0050C3E1 /* Schedule */,
 				A488FB432B9AFAD5004D4A09 /* Common */,
 				833DC8092B8750120096703B /* Home */,
 				F1D9A86D2BBAC49B00551905 /* Mission */,
@@ -715,6 +722,77 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+		A4BA86E82BC3A8C20078FC4B /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A4BA86E92BC3A9090078FC4B /* MemberMyDto.swift */,
+				A4BA86ED2BC3ADF00078FC4B /* CafeAllDto.swift */,
+				A4BA86F22BC411210078FC4B /* CafeNoticeDto.swift */,
+				F1F17A1A2BF2328800292D91 /* ScheduleMyDto.swift */,
+				A4BA870C2BCCD5460078FC4B /* MemberScheduleDto.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		A4BA86EF2BC40E790078FC4B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				A4BA86F02BC40ECB0078FC4B /* HomeNoticeCollectionViewCell.swift */,
+				A4BA870A2BCCD52E0078FC4B /* HomeMemberScheduleCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		E569222E2BFDAC9A0050C3E1 /* Schedule */ = {
+			isa = PBXGroup;
+			children = (
+				E569222F2BFDACA70050C3E1 /* ScheduleReplacement */,
+			);
+			path = Schedule;
+			sourceTree = "<group>";
+		};
+		E569222F2BFDACA70050C3E1 /* ScheduleReplacement */ = {
+			isa = PBXGroup;
+			children = (
+				E56922302BFDACB30050C3E1 /* ScheduleReplacementScene */,
+			);
+			path = ScheduleReplacement;
+			sourceTree = "<group>";
+		};
+		E56922302BFDACB30050C3E1 /* ScheduleReplacementScene */ = {
+			isa = PBXGroup;
+			children = (
+				E56922332BFDACD60050C3E1 /* Model */,
+				E56922322BFDACCF0050C3E1 /* ViewModel */,
+				E56922312BFDACC60050C3E1 /* View */,
+			);
+			path = ScheduleReplacementScene;
+			sourceTree = "<group>";
+		};
+		E56922312BFDACC60050C3E1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E56922352BFDAD160050C3E1 /* scheduleReplacementView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E56922322BFDACCF0050C3E1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E569223B2BFDAD680050C3E1 /* scheduleReplacementViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E56922332BFDACD60050C3E1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E569223D2BFDAD760050C3E1 /* scheduleReplacementInfo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		E56EB8972BEB243500DF9DDD /* NoticeScene */ = {
 			isa = PBXGroup;
 			children = (
@@ -765,27 +843,6 @@
 				E56EB8A52BEB256B00DF9DDD /* NoticeInfo.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		A4BA86E82BC3A8C20078FC4B /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				A4BA86E92BC3A9090078FC4B /* MemberMyDto.swift */,
-				A4BA86ED2BC3ADF00078FC4B /* CafeAllDto.swift */,
-				A4BA86F22BC411210078FC4B /* CafeNoticeDto.swift */,
-				F1F17A1A2BF2328800292D91 /* ScheduleMyDto.swift */,
-				A4BA870C2BCCD5460078FC4B /* MemberScheduleDto.swift */,
-			);
-			path = Home;
-			sourceTree = "<group>";
-		};
-		A4BA86EF2BC40E790078FC4B /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-				A4BA86F02BC40ECB0078FC4B /* HomeNoticeCollectionViewCell.swift */,
-				A4BA870A2BCCD52E0078FC4B /* HomeMemberScheduleCollectionViewCell.swift */,
-			);
-			path = Cell;
 			sourceTree = "<group>";
 		};
 		E586242D2BC7B5DC004829AB /* Auth */ = {
@@ -1191,6 +1248,7 @@
 				F113CB4B2BA2F2F600FA6D71 /* MyWorkView.swift in Sources */,
 				F1D9A8762BBAC4E800551905 /* MissionViewModel.swift in Sources */,
 				F1F1799C2BCC1F4B00292D91 /* RoutineViewModel.swift in Sources */,
+				E56922362BFDAD160050C3E1 /* scheduleReplacementView.swift in Sources */,
 				A4BA870B2BCCD52E0078FC4B /* HomeMemberScheduleCollectionViewCell.swift in Sources */,
 				A43B232F2BA6A45000E15CC3 /* StoreInputView.swift in Sources */,
 				A4667E6F2BB4796600FF3A7D /* LoginView.swift in Sources */,
@@ -1199,6 +1257,7 @@
 				A43B23392BA87C3C00E15CC3 /* RegisterCompleteViewController.swift in Sources */,
 				F1FD4F932BB58841009C3050 /* CustomDropDownTableViewCell.swift in Sources */,
 				A4667E742BB4799700FF3A7D /* LoginImageDto.swift in Sources */,
+				E569223E2BFDAD760050C3E1 /* scheduleReplacementInfo.swift in Sources */,
 				A43C73FA2B90516C00B39F21 /* APIConstant.swift in Sources */,
 				A41289EA2BA04B9D00E3462D /* NameInputViewController.swift in Sources */,
 				F1F179962BCC1EE900292D91 /* RoutineCollectionHeaderView.swift in Sources */,
@@ -1210,6 +1269,7 @@
 				8304715E2B87BD22005AEEB4 /* UIImageView+.swift in Sources */,
 				A4BA86EC2BC3A9B70078FC4B /* HomeViewModel.swift in Sources */,
 				833DC7FE2B874CED0096703B /* SizeLiterals.swift in Sources */,
+				E569223C2BFDAD680050C3E1 /* scheduleReplacementViewModel.swift in Sources */,
 				F1F179B12BD0008800292D91 /* LeftAlignedCollectionViewFlowLayout.swift in Sources */,
 				F190A4A42BB1635B006440F0 /* AskReplacementViewController.swift in Sources */,
 				F1D9A8802BBC021D00551905 /* StaffMissionCollectionViewCell.swift in Sources */,
@@ -1226,7 +1286,6 @@
 				833A6AF12B873317001370CD /* AppDelegate.swift in Sources */,
 				A43B22F82BA3393100E15CC3 /* InviteCodeView.swift in Sources */,
 				833DC8082B874DD90096703B /* UICollectionViewRegisterable.swift in Sources */,
-				833DC8172B8751150096703B /* a.swift in Sources */,
 				E56EB8A22BEB255000DF9DDD /* NoticeViewController.swift in Sources */,
 				830471562B87BA0E005AEEB4 /* UIStackView+.swift in Sources */,
 				F1FD4F972BB5886E009C3050 /* CustomPaddingLabel.swift in Sources */,
