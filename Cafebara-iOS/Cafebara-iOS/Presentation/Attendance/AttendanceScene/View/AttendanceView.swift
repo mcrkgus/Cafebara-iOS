@@ -167,7 +167,7 @@ extension AttendanceView {
     
     func setLayout() {
         navigationBar.snp.makeConstraints {
-            $0.leading.trailing.equalToSuperview()
+            $0.horizontalEdges.equalToSuperview()
             $0.top.equalTo(safeAreaLayoutGuide)
         }
         
@@ -208,27 +208,17 @@ extension AttendanceView {
             }
         }
         
-        startWorkButton.snp.makeConstraints {
-            $0.centerX.equalToSuperview()
-            switch SizeLiterals.Screen.screenWidth {
-            case ...375:
-                $0.top.equalTo(attendanceStackView.snp.bottom).offset(44)
-            case 376...393:
-                $0.top.equalTo(attendanceStackView.snp.bottom).offset(81)
-            default:
-                $0.top.equalTo(attendanceStackView.snp.bottom).offset(118)
-            }
-        }
-        
-        finishWorkButton.snp.makeConstraints {
-            $0.centerX.equalToSuperview()
-            switch SizeLiterals.Screen.screenWidth {
-            case ...375:
-                $0.top.equalTo(attendanceStackView.snp.bottom).offset(44)
-            case 376...393:
-                $0.top.equalTo(attendanceStackView.snp.bottom).offset(81)
-            default:
-                $0.top.equalTo(attendanceStackView.snp.bottom).offset(118)
+        [startWorkButton, finishWorkButton].forEach{
+            $0.snp.makeConstraints {
+                $0.centerX.equalToSuperview()
+                switch SizeLiterals.Screen.screenWidth {
+                case ...375:
+                    $0.top.equalTo(attendanceStackView.snp.bottom).offset(44)
+                case 376...393:
+                    $0.top.equalTo(attendanceStackView.snp.bottom).offset(81)
+                default:
+                    $0.top.equalTo(attendanceStackView.snp.bottom).offset(118)
+                }
             }
         }
     }
