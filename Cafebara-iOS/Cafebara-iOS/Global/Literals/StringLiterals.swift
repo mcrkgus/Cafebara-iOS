@@ -113,4 +113,13 @@ enum I18N {
         static let changeModifyButtonTitle = "수정하기"
         static let addRoutineKeywordLabel = "새로 추가하기"
     }
+    
+    enum Attendance {
+        static let attendanceTitle = "출퇴근"
+        static let beforeWorkLabel = "출근전"
+        static let workingLabel = "근무중"
+        static let greetingLabel = "님, 안녕하세요!"
+        static let goToWorkButtonTitle = "출근하기"
+        static let goToHomeButtonTitle = "퇴근하기"
+    }
 }

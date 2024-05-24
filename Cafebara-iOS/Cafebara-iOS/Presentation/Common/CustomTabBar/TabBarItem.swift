@@ -69,8 +69,8 @@ enum TabBarItem: CaseIterable {
         case .schedule:
             return ViewController() // ScheduleViewController()
         case .work: 
-            return ViewController() // WorkViewController()
-        case .mypage: 
+            return AttendanceViewController() 
+        case .mypage:
             return ViewController() // MyPageViewController()
         }
     }
