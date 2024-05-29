@@ -95,6 +95,16 @@
 		E58624262BC7B454004829AB /* BaraProviders.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58624252BC7B454004829AB /* BaraProviders.swift */; };
 		E58624282BC7B47B004829AB /* BaraInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58624272BC7B47B004829AB /* BaraInterceptor.swift */; };
 		E586242C2BC7B57A004829AB /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E586242B2BC7B57A004829AB /* UserManager.swift */; };
+		E5DC65192C07A6CA0033AECB /* StaffManagementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DC65182C07A6CA0033AECB /* StaffManagementView.swift */; };
+		E5DC651B2C07A6E90033AECB /* StaffManagementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DC651A2C07A6E90033AECB /* StaffManagementViewController.swift */; };
+		E5DC651D2C07A7040033AECB /* StaffManagementCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DC651C2C07A7040033AECB /* StaffManagementCollectionViewCell.swift */; };
+		E5DC651F2C07A7190033AECB /* StaffManagementViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DC651E2C07A7190033AECB /* StaffManagementViewModel.swift */; };
+		E5DC65212C07A7330033AECB /* StaffManagementInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DC65202C07A7330033AECB /* StaffManagementInfo.swift */; };
+		E5DC65232C07A74D0033AECB /* StoreManagementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DC65222C07A74D0033AECB /* StoreManagementViewController.swift */; };
+		E5DC65252C07A75C0033AECB /* StoreManagementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DC65242C07A75C0033AECB /* StoreManagementView.swift */; };
+		E5DC65272C07A7710033AECB /* StoreManagementCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DC65262C07A7710033AECB /* StoreManagementCollectionViewCell.swift */; };
+		E5DC65292C07A7850033AECB /* StoreManagementViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DC65282C07A7850033AECB /* StoreManagementViewModel.swift */; };
+		E5DC652B2C07A79B0033AECB /* StoreManagementInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DC652A2C07A79B0033AECB /* StoreManagementInfo.swift */; };
 		F113CB492BA2EFCD00FA6D71 /* MyWorkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F113CB482BA2EFCD00FA6D71 /* MyWorkViewController.swift */; };
 		F113CB4B2BA2F2F600FA6D71 /* MyWorkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F113CB4A2BA2F2F600FA6D71 /* MyWorkView.swift */; };
 		F113CB4D2BA308C800FA6D71 /* MyWorkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F113CB4C2BA308C800FA6D71 /* MyWorkViewModel.swift */; };
@@ -206,6 +216,16 @@
 		E58624252BC7B454004829AB /* BaraProviders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaraProviders.swift; sourceTree = "<group>"; };
 		E58624272BC7B47B004829AB /* BaraInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaraInterceptor.swift; sourceTree = "<group>"; };
 		E586242B2BC7B57A004829AB /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		E5DC65182C07A6CA0033AECB /* StaffManagementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaffManagementView.swift; sourceTree = "<group>"; };
+		E5DC651A2C07A6E90033AECB /* StaffManagementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaffManagementViewController.swift; sourceTree = "<group>"; };
+		E5DC651C2C07A7040033AECB /* StaffManagementCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaffManagementCollectionViewCell.swift; sourceTree = "<group>"; };
+		E5DC651E2C07A7190033AECB /* StaffManagementViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaffManagementViewModel.swift; sourceTree = "<group>"; };
+		E5DC65202C07A7330033AECB /* StaffManagementInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaffManagementInfo.swift; sourceTree = "<group>"; };
+		E5DC65222C07A74D0033AECB /* StoreManagementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreManagementViewController.swift; sourceTree = "<group>"; };
+		E5DC65242C07A75C0033AECB /* StoreManagementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreManagementView.swift; sourceTree = "<group>"; };
+		E5DC65262C07A7710033AECB /* StoreManagementCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreManagementCollectionViewCell.swift; sourceTree = "<group>"; };
+		E5DC65282C07A7850033AECB /* StoreManagementViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreManagementViewModel.swift; sourceTree = "<group>"; };
+		E5DC652A2C07A79B0033AECB /* StoreManagementInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreManagementInfo.swift; sourceTree = "<group>"; };
 		F113CB482BA2EFCD00FA6D71 /* MyWorkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWorkViewController.swift; sourceTree = "<group>"; };
 		F113CB4A2BA2F2F600FA6D71 /* MyWorkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWorkView.swift; sourceTree = "<group>"; };
 		F113CB4C2BA308C800FA6D71 /* MyWorkViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWorkViewModel.swift; sourceTree = "<group>"; };
@@ -298,6 +318,7 @@
 		833DC7F22B874C030096703B /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				E5DC650B2C0794380033AECB /* MyPage */,
 				E5084B962BFB597E006AF815 /* Attendance */,
 				A488FB432B9AFAD5004D4A09 /* Common */,
 				833DC8092B8750120096703B /* Home */,
@@ -842,6 +863,119 @@
 			path = Auth;
 			sourceTree = "<group>";
 		};
+		E5DC650B2C0794380033AECB /* MyPage */ = {
+			isa = PBXGroup;
+			children = (
+				E5DC650D2C07A4A50033AECB /* StaffManagementScene */,
+				E5DC650C2C07A47D0033AECB /* StoreManagementScene */,
+			);
+			path = MyPage;
+			sourceTree = "<group>";
+		};
+		E5DC650C2C07A47D0033AECB /* StoreManagementScene */ = {
+			isa = PBXGroup;
+			children = (
+				E5DC65172C07A5FB0033AECB /* ViewController */,
+				E5DC65162C07A5F70033AECB /* View */,
+				E5DC65152C07A5F10033AECB /* Cell */,
+				E5DC65142C07A5E90033AECB /* ViewModel */,
+				E5DC65132C07A5E30033AECB /* Model */,
+			);
+			path = StoreManagementScene;
+			sourceTree = "<group>";
+		};
+		E5DC650D2C07A4A50033AECB /* StaffManagementScene */ = {
+			isa = PBXGroup;
+			children = (
+				E5DC65122C07A5DA0033AECB /* Model */,
+				E5DC65112C07A5C70033AECB /* ViewModel */,
+				E5DC65102C07A5BF0033AECB /* Cell */,
+				E5DC650F2C07A5B90033AECB /* View */,
+				E5DC650E2C07A57F0033AECB /* ViewController */,
+			);
+			path = StaffManagementScene;
+			sourceTree = "<group>";
+		};
+		E5DC650E2C07A57F0033AECB /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E5DC651A2C07A6E90033AECB /* StaffManagementViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		E5DC650F2C07A5B90033AECB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E5DC65182C07A6CA0033AECB /* StaffManagementView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E5DC65102C07A5BF0033AECB /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				E5DC651C2C07A7040033AECB /* StaffManagementCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		E5DC65112C07A5C70033AECB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E5DC651E2C07A7190033AECB /* StaffManagementViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E5DC65122C07A5DA0033AECB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E5DC65202C07A7330033AECB /* StaffManagementInfo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E5DC65132C07A5E30033AECB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E5DC652A2C07A79B0033AECB /* StoreManagementInfo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E5DC65142C07A5E90033AECB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E5DC65282C07A7850033AECB /* StoreManagementViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E5DC65152C07A5F10033AECB /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				E5DC65262C07A7710033AECB /* StoreManagementCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		E5DC65162C07A5F70033AECB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E5DC65242C07A75C0033AECB /* StoreManagementView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E5DC65172C07A5FB0033AECB /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E5DC65222C07A74D0033AECB /* StoreManagementViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		F113CB432BA2EF3E00FA6D71 /* MyWorkScene */ = {
 			isa = PBXGroup;
 			children = (
@@ -1208,10 +1342,12 @@
 				F1F179AA2BCE8E1B00292D91 /* RoutineKeywordCollectionViewCell.swift in Sources */,
 				833DC7FA2B874CD50096703B /* FontLiterals.swift in Sources */,
 				F1F179A62BCE8D2500292D91 /* RoutineKeywordInfo.swift in Sources */,
+				E5DC65252C07A75C0033AECB /* StoreManagementView.swift in Sources */,
 				A43C73F62B90515300B39F21 /* GeneralResponse.swift in Sources */,
 				A488FB462B9AFAF4004D4A09 /* CustomNavigationView.swift in Sources */,
 				A488FBAB2B9B81AB004D4A09 /* CustomToastMessage.swift in Sources */,
 				A4667E712BB4796F00FF3A7D /* LoginCollectionViewCell.swift in Sources */,
+				E5DC65212C07A7330033AECB /* StaffManagementInfo.swift in Sources */,
 				A4BA86F12BC40ECB0078FC4B /* HomeNoticeCollectionViewCell.swift in Sources */,
 				A43B22F62BA3392500E15CC3 /* InviteCodeViewController.swift in Sources */,
 				830471582B87BA52005AEEB4 /* UILabel+.swift in Sources */,
@@ -1222,6 +1358,8 @@
 				A41289E32B9F731300E3462D /* RoleChoiceViewController.swift in Sources */,
 				8304715A2B87BBC2005AEEB4 /* UIButton+.swift in Sources */,
 				F113CB4D2BA308C800FA6D71 /* MyWorkViewModel.swift in Sources */,
+				E5DC65292C07A7850033AECB /* StoreManagementViewModel.swift in Sources */,
+				E5DC65232C07A74D0033AECB /* StoreManagementViewController.swift in Sources */,
 				F1F179A12BCD43C100292D91 /* AddRoutineView.swift in Sources */,
 				F1D9A8822BBD6E8400551905 /* StaffMissionCollectionHeaderVIew.swift in Sources */,
 				833DC8042B874D5C0096703B /* UITableViewRegisterable.swift in Sources */,
@@ -1238,6 +1376,7 @@
 				A43B23392BA87C3C00E15CC3 /* RegisterCompleteViewController.swift in Sources */,
 				F1FD4F932BB58841009C3050 /* CustomDropDownTableViewCell.swift in Sources */,
 				A4667E742BB4799700FF3A7D /* LoginImageDto.swift in Sources */,
+				E5DC65272C07A7710033AECB /* StoreManagementCollectionViewCell.swift in Sources */,
 				A43C73FA2B90516C00B39F21 /* APIConstant.swift in Sources */,
 				A41289EA2BA04B9D00E3462D /* NameInputViewController.swift in Sources */,
 				F1F179962BCC1EE900292D91 /* RoutineCollectionHeaderView.swift in Sources */,
@@ -1259,9 +1398,11 @@
 				A4BA86E42BC39FAE0078FC4B /* HomeView.swift in Sources */,
 				A43C74062B90527000B39F21 /* HomeAPI.swift in Sources */,
 				A4BA86EE2BC3ADF00078FC4B /* CafeAllDto.swift in Sources */,
+				E5DC652B2C07A79B0033AECB /* StoreManagementInfo.swift in Sources */,
 				A488FBA82B9B6B8E004D4A09 /* CustomButton.swift in Sources */,
 				A4BA86F32BC411210078FC4B /* CafeNoticeDto.swift in Sources */,
 				A4BA86E22BC39F930078FC4B /* HomeViewController.swift in Sources */,
+				E5DC651B2C07A6E90033AECB /* StaffManagementViewController.swift in Sources */,
 				A4BA86EA2BC3A9090078FC4B /* MemberMyDto.swift in Sources */,
 				833A6AF12B873317001370CD /* AppDelegate.swift in Sources */,
 				A43B22F82BA3393100E15CC3 /* InviteCodeView.swift in Sources */,
@@ -1290,9 +1431,12 @@
 				F1F179942BCC1ECA00292D91 /* RoutineInfo.swift in Sources */,
 				833A6AF32B873317001370CD /* SceneDelegate.swift in Sources */,
 				F190A4A62BB16554006440F0 /* AskReplacementView.swift in Sources */,
+				E5DC65192C07A6CA0033AECB /* StaffManagementView.swift in Sources */,
 				F1D9A8722BBAC4D500551905 /* MissionView.swift in Sources */,
+				E5DC651D2C07A7040033AECB /* StaffManagementCollectionViewCell.swift in Sources */,
 				E58624262BC7B454004829AB /* BaraProviders.swift in Sources */,
 				830471542B87B9E2005AEEB4 /* UIColor+.swift in Sources */,
+				E5DC651F2C07A7190033AECB /* StaffManagementViewModel.swift in Sources */,
 				E56EB8A42BEB255E00DF9DDD /* NoticeCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
