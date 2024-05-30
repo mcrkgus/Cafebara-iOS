@@ -199,7 +199,7 @@ extension ScheduleReplacementView {
         }
         
         scheduleReplacementView.snp.makeConstraints {
-            $0.centerX.centerY.equalToSuperview()
+            $0.center.equalToSuperview()
             $0.height.equalTo(425)
             $0.width.equalTo(312)
         }

@@ -32,13 +32,12 @@ final class ScheduleTestViewController: UIViewController {
         
         setUI()
         bindViewModel()
-        setDelegate()
     }
 }
 
 // MARK: - Extensions
 
-extension ScheduleTestViewController {
+private extension ScheduleTestViewController {
     
     func setUI() {
         self.navigationController?.navigationBar.isHidden = true
@@ -78,9 +77,5 @@ extension ScheduleTestViewController {
                 print(result)
             })
             .disposed(by: disposeBag)
-    }
-    
-    func setDelegate() {
-        
     }
 }
