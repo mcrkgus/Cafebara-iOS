@@ -42,7 +42,6 @@ final class NoticeViewController: UIViewController {
 extension NoticeViewController {
     
     func setUI() {
-        
         self.navigationController?.navigationBar.isHidden = true
         noticeView.navigationBar.backButtonAction = {
             self.navigationController?.popViewController(animated: true)
@@ -50,7 +49,6 @@ extension NoticeViewController {
     }
     
     func bindViewModel() {
-        
         viewModel.outputs.noticeInfoData
             .bind(to: noticeView.noticeCollectionView.rx
                 .items(cellIdentifier: NoticeCollectionViewCell.className,

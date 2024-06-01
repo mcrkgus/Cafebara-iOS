@@ -67,6 +67,10 @@ enum TabBarItem: CaseIterable {
         case .todo:
             return UserDefaults.standard.bool(forKey: "isOwner") ? MissionViewController() : ViewController()
         case .schedule:
+            return ViewController() // ScheduleViewController()
+        case .work: 
+            return AttendanceViewController() 
+        case .mypage:
             return ScheduleTestViewController() // 임시로 UI 확인하려고 만들어둔 뷰컨입니다
         case .work:
             return ViewController() // WorkViewController()

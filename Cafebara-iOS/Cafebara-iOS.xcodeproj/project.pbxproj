@@ -91,6 +91,13 @@
 		E56EB8A22BEB255000DF9DDD /* NoticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56EB8A12BEB255000DF9DDD /* NoticeViewController.swift */; };
 		E56EB8A42BEB255E00DF9DDD /* NoticeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56EB8A32BEB255E00DF9DDD /* NoticeCollectionViewCell.swift */; };
 		E56EB8A62BEB256B00DF9DDD /* NoticeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56EB8A52BEB256B00DF9DDD /* NoticeInfo.swift */; };
+		E5084B9D2BFB59D8006AF815 /* AttendanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5084B9C2BFB59D8006AF815 /* AttendanceViewController.swift */; };
+		E5084B9F2BFB59EF006AF815 /* AttendanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5084B9E2BFB59EF006AF815 /* AttendanceView.swift */; };
+		E56EB89E2BEB24EA00DF9DDD /* NoticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56EB89D2BEB24EA00DF9DDD /* NoticeView.swift */; };
+		E56EB8A02BEB253C00DF9DDD /* NoticeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56EB89F2BEB253C00DF9DDD /* NoticeViewModel.swift */; };
+		E56EB8A22BEB255000DF9DDD /* NoticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56EB8A12BEB255000DF9DDD /* NoticeViewController.swift */; };
+		E56EB8A42BEB255E00DF9DDD /* NoticeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56EB8A32BEB255E00DF9DDD /* NoticeCollectionViewCell.swift */; };
+		E56EB8A62BEB256B00DF9DDD /* NoticeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56EB8A52BEB256B00DF9DDD /* NoticeInfo.swift */; };
 		E58624222BC7B3EE004829AB /* AuthTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58624212BC7B3EE004829AB /* AuthTarget.swift */; };
 		E58624242BC7B43D004829AB /* AuthAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58624232BC7B43D004829AB /* AuthAPI.swift */; };
 		E58624262BC7B454004829AB /* BaraProviders.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58624252BC7B454004829AB /* BaraProviders.swift */; };
@@ -204,6 +211,13 @@
 		E56EB8A12BEB255000DF9DDD /* NoticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeViewController.swift; sourceTree = "<group>"; };
 		E56EB8A32BEB255E00DF9DDD /* NoticeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeCollectionViewCell.swift; sourceTree = "<group>"; };
 		E56EB8A52BEB256B00DF9DDD /* NoticeInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeInfo.swift; sourceTree = "<group>"; };
+		E5084B9C2BFB59D8006AF815 /* AttendanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceViewController.swift; sourceTree = "<group>"; };
+		E5084B9E2BFB59EF006AF815 /* AttendanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceView.swift; sourceTree = "<group>"; };
+		E56EB89D2BEB24EA00DF9DDD /* NoticeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeView.swift; sourceTree = "<group>"; };
+		E56EB89F2BEB253C00DF9DDD /* NoticeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeViewModel.swift; sourceTree = "<group>"; };
+		E56EB8A12BEB255000DF9DDD /* NoticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeViewController.swift; sourceTree = "<group>"; };
+		E56EB8A32BEB255E00DF9DDD /* NoticeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeCollectionViewCell.swift; sourceTree = "<group>"; };
+		E56EB8A52BEB256B00DF9DDD /* NoticeInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeInfo.swift; sourceTree = "<group>"; };
 		E58624212BC7B3EE004829AB /* AuthTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTarget.swift; sourceTree = "<group>"; };
 		E58624232BC7B43D004829AB /* AuthAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthAPI.swift; sourceTree = "<group>"; };
 		E58624252BC7B454004829AB /* BaraProviders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaraProviders.swift; sourceTree = "<group>"; };
@@ -303,6 +317,7 @@
 			isa = PBXGroup;
 			children = (
 				E569222E2BFDAC9A0050C3E1 /* Schedule */,
+				E5084B962BFB597E006AF815 /* Attendance */,
 				A488FB432B9AFAD5004D4A09 /* Common */,
 				833DC8092B8750120096703B /* Home */,
 				F1D9A86D2BBAC49B00551905 /* Mission */,
@@ -796,6 +811,60 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		A4BA86E82BC3A8C20078FC4B /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A4BA86E92BC3A9090078FC4B /* MemberMyDto.swift */,
+				A4BA86ED2BC3ADF00078FC4B /* CafeAllDto.swift */,
+				A4BA86F22BC411210078FC4B /* CafeNoticeDto.swift */,
+				F1F17A1A2BF2328800292D91 /* ScheduleMyDto.swift */,
+				A4BA870C2BCCD5460078FC4B /* MemberScheduleDto.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		A4BA86EF2BC40E790078FC4B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				A4BA86F02BC40ECB0078FC4B /* HomeNoticeCollectionViewCell.swift */,
+				A4BA870A2BCCD52E0078FC4B /* HomeMemberScheduleCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		E5084B962BFB597E006AF815 /* Attendance */ = {
+			isa = PBXGroup;
+			children = (
+				E5084B972BFB5990006AF815 /* AttendanceScene */,
+			);
+			path = Attendance;
+			sourceTree = "<group>";
+		};
+		E5084B972BFB5990006AF815 /* AttendanceScene */ = {
+			isa = PBXGroup;
+			children = (
+				E5084B9B2BFB59B6006AF815 /* ViewController */,
+				E5084B9A2BFB59B2006AF815 /* View */,
+			);
+			path = AttendanceScene;
+			sourceTree = "<group>";
+		};
+		E5084B9A2BFB59B2006AF815 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E5084B9E2BFB59EF006AF815 /* AttendanceView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E5084B9B2BFB59B6006AF815 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E5084B9C2BFB59D8006AF815 /* AttendanceViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		E56EB8972BEB243500DF9DDD /* NoticeScene */ = {
 			isa = PBXGroup;
 			children = (
@@ -1221,6 +1290,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E56EB89E2BEB24EA00DF9DDD /* NoticeView.swift in Sources */,
+				E5084B9F2BFB59EF006AF815 /* AttendanceView.swift in Sources */,
 				F1F179A32BCD43D100292D91 /* AddRoutineViewController.swift in Sources */,
 				F1D9A87B2BBBF74200551905 /* StaffMissionInfo.swift in Sources */,
 				F1FD4F952BB58857009C3050 /* CustomDropDownView.swift in Sources */,
@@ -1280,6 +1350,7 @@
 				A4BA870D2BCCD5460078FC4B /* MemberScheduleDto.swift in Sources */,
 				83752E3E2B9F086D0060F047 /* TabBarItem.swift in Sources */,
 				E586242C2BC7B57A004829AB /* UserManager.swift in Sources */,
+				E5084B9D2BFB59D8006AF815 /* AttendanceViewController.swift in Sources */,
 				A4BA86E42BC39FAE0078FC4B /* HomeView.swift in Sources */,
 				A43C74062B90527000B39F21 /* HomeAPI.swift in Sources */,
 				A4BA86EE2BC3ADF00078FC4B /* CafeAllDto.swift in Sources */,
