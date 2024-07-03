@@ -35,7 +35,7 @@ final class StoreManagementViewModel: StoreManagementViewModelInputs, StoreManag
     var storeManageInfo = BehaviorSubject<[StoreInfoSection]>(value: [])
     
     init() {
-        var storeManageDTO: [StoreManagementInfo] = [
+        let storeManageDTO: [StoreManagementInfo] = [
             StoreManagementInfo(storeName: "티니핑핑이카페", date: [2019, 06, 22], staffNum: 4),
             StoreManagementInfo(storeName: "예스리사장카페", date: [2019, 08, 22], staffNum: 8),
             StoreManagementInfo(storeName: "민지사장카페", date: [2019, 12, 28], staffNum: 12),
