@@ -12,8 +12,6 @@ import Then
 
 final class StoreManagementCollectionHeaderView: UICollectionReusableView, UICollectionHeaderViewRegisterable {
     
-    static let reuseIdentifier = "StoreManagementCollectionHeaderView"
-    
     // MARK: - Properties
     
     static let isFromNib: Bool = false
