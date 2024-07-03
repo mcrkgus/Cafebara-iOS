@@ -105,6 +105,7 @@
 		E5DC65272C07A7710033AECB /* StoreManagementCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DC65262C07A7710033AECB /* StoreManagementCollectionViewCell.swift */; };
 		E5DC65292C07A7850033AECB /* StoreManagementViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DC65282C07A7850033AECB /* StoreManagementViewModel.swift */; };
 		E5DC652B2C07A79B0033AECB /* StoreManagementInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DC652A2C07A79B0033AECB /* StoreManagementInfo.swift */; };
+		E5EF9C5D2C359ED600939868 /* StoreManagementCollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5EF9C5C2C359ED600939868 /* StoreManagementCollectionHeaderView.swift */; };
 		F113CB492BA2EFCD00FA6D71 /* MyWorkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F113CB482BA2EFCD00FA6D71 /* MyWorkViewController.swift */; };
 		F113CB4B2BA2F2F600FA6D71 /* MyWorkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F113CB4A2BA2F2F600FA6D71 /* MyWorkView.swift */; };
 		F113CB4D2BA308C800FA6D71 /* MyWorkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F113CB4C2BA308C800FA6D71 /* MyWorkViewModel.swift */; };
@@ -226,6 +227,7 @@
 		E5DC65262C07A7710033AECB /* StoreManagementCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreManagementCollectionViewCell.swift; sourceTree = "<group>"; };
 		E5DC65282C07A7850033AECB /* StoreManagementViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreManagementViewModel.swift; sourceTree = "<group>"; };
 		E5DC652A2C07A79B0033AECB /* StoreManagementInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreManagementInfo.swift; sourceTree = "<group>"; };
+		E5EF9C5C2C359ED600939868 /* StoreManagementCollectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreManagementCollectionHeaderView.swift; sourceTree = "<group>"; };
 		F113CB482BA2EFCD00FA6D71 /* MyWorkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWorkViewController.swift; sourceTree = "<group>"; };
 		F113CB4A2BA2F2F600FA6D71 /* MyWorkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWorkView.swift; sourceTree = "<group>"; };
 		F113CB4C2BA308C800FA6D71 /* MyWorkViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWorkViewModel.swift; sourceTree = "<group>"; };
@@ -964,6 +966,7 @@
 			isa = PBXGroup;
 			children = (
 				E5DC65242C07A75C0033AECB /* StoreManagementView.swift */,
+				E5EF9C5C2C359ED600939868 /* StoreManagementCollectionHeaderView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1335,6 +1338,7 @@
 				E56EB89E2BEB24EA00DF9DDD /* NoticeView.swift in Sources */,
 				E5084B9F2BFB59EF006AF815 /* AttendanceView.swift in Sources */,
 				F1F179A32BCD43D100292D91 /* AddRoutineViewController.swift in Sources */,
+				E5EF9C5D2C359ED600939868 /* StoreManagementCollectionHeaderView.swift in Sources */,
 				F1D9A87B2BBBF74200551905 /* StaffMissionInfo.swift in Sources */,
 				F1FD4F952BB58857009C3050 /* CustomDropDownView.swift in Sources */,
 				A43C74002B90518800B39F21 /* BaseTargetType.swift in Sources */,
