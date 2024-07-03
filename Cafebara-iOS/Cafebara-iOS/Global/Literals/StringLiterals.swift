@@ -128,6 +128,7 @@ enum I18N {
         static let exitStoreExplanation = "탈퇴할 업장을 선택해주세요"
         static let exitStoreButtonTitle = "탈퇴하기"
         static let exitAlertExplanation = "선택할 업장을 탈퇴하실 건가요?\n탈퇴한 업장은 초대코드로 다시 추가 가능해요"
+        static let swungDash = "~"
         static let exitButtonTitle = "할래요"
         static let cancelButtonTitle = "안할래요"
         static let exitToastMessage = "업장을 탈퇴했어요"
