@@ -46,7 +46,6 @@ extension StoreManagementViewController: UICollectionViewDelegateFlowLayout {
         storeManagementView.navigationBar.backButtonAction = {
             self.navigationController?.popViewController(animated: true)
         }
-        storeManagementView.storeManageCollectionView.allowsSelection = true
     }
     
     func setGesture() {
