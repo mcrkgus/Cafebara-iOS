@@ -137,21 +137,13 @@ extension StoreManagementCollectionViewCell {
     }
     
     func updateUI(isSelected: Bool) {
-        if isSelected {
-            contentsView.do {
-                $0.backgroundColor = .blue10
-                $0.setRoundBorder(borderColor: .blueBara, borderWidth: 1, cornerRadius: 8)
-            }
-            storeNameLabel.do {
-                $0.textColor = .blueBara
-            }
-        } else {
-            contentsView.do {
-                $0.backgroundColor = .whiteBara
-                $0.setRoundBorder(borderColor: .gray1, borderWidth: 1, cornerRadius: 8)
-            }
-            storeNameLabel.do {
-                $0.textColor = .black            }
+        contentsView.do {
+            $0.backgroundColor = isSelected ? .blue10 : .whiteBara
+            $0.setRoundBorder(borderColor: isSelected ? .blueBara : .gray1, borderWidth: 1, cornerRadius: 8)
+        }
+        storeNameLabel.do {
+            $0.textColor = isSelected ? .blueBara : .black
         }
     }
+
 }
