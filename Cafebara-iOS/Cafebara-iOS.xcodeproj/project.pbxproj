@@ -83,16 +83,13 @@
 		A4BA86F32BC411210078FC4B /* CafeNoticeDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BA86F22BC411210078FC4B /* CafeNoticeDto.swift */; };
 		A4BA870B2BCCD52E0078FC4B /* HomeMemberScheduleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BA870A2BCCD52E0078FC4B /* HomeMemberScheduleCollectionViewCell.swift */; };
 		A4BA870D2BCCD5460078FC4B /* MemberScheduleDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BA870C2BCCD5460078FC4B /* MemberScheduleDto.swift */; };
+		E5084B9D2BFB59D8006AF815 /* AttendanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5084B9C2BFB59D8006AF815 /* AttendanceViewController.swift */; };
+		E5084B9F2BFB59EF006AF815 /* AttendanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5084B9E2BFB59EF006AF815 /* AttendanceView.swift */; };
+		E547DF0D2C368F220077D397 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E547DF0C2C368F220077D397 /* BaseView.swift */; };
+		E547DF0F2C3690300077D397 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E547DF0E2C3690300077D397 /* BaseViewController.swift */; };
 		E56922362BFDAD160050C3E1 /* ScheduleReplacementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56922352BFDAD160050C3E1 /* ScheduleReplacementView.swift */; };
 		E569223C2BFDAD680050C3E1 /* ScheduleReplacementViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E569223B2BFDAD680050C3E1 /* ScheduleReplacementViewModel.swift */; };
 		E569223E2BFDAD760050C3E1 /* ScheduleReplacementInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E569223D2BFDAD760050C3E1 /* ScheduleReplacementInfo.swift */; };
-		E56EB89E2BEB24EA00DF9DDD /* NoticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56EB89D2BEB24EA00DF9DDD /* NoticeView.swift */; };
-		E56EB8A02BEB253C00DF9DDD /* NoticeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56EB89F2BEB253C00DF9DDD /* NoticeViewModel.swift */; };
-		E56EB8A22BEB255000DF9DDD /* NoticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56EB8A12BEB255000DF9DDD /* NoticeViewController.swift */; };
-		E56EB8A42BEB255E00DF9DDD /* NoticeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56EB8A32BEB255E00DF9DDD /* NoticeCollectionViewCell.swift */; };
-		E56EB8A62BEB256B00DF9DDD /* NoticeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56EB8A52BEB256B00DF9DDD /* NoticeInfo.swift */; };
-		E5084B9D2BFB59D8006AF815 /* AttendanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5084B9C2BFB59D8006AF815 /* AttendanceViewController.swift */; };
-		E5084B9F2BFB59EF006AF815 /* AttendanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5084B9E2BFB59EF006AF815 /* AttendanceView.swift */; };
 		E56EB89E2BEB24EA00DF9DDD /* NoticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56EB89D2BEB24EA00DF9DDD /* NoticeView.swift */; };
 		E56EB8A02BEB253C00DF9DDD /* NoticeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56EB89F2BEB253C00DF9DDD /* NoticeViewModel.swift */; };
 		E56EB8A22BEB255000DF9DDD /* NoticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56EB8A12BEB255000DF9DDD /* NoticeViewController.swift */; };
@@ -103,6 +100,7 @@
 		E58624262BC7B454004829AB /* BaraProviders.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58624252BC7B454004829AB /* BaraProviders.swift */; };
 		E58624282BC7B47B004829AB /* BaraInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58624272BC7B47B004829AB /* BaraInterceptor.swift */; };
 		E586242C2BC7B57A004829AB /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E586242B2BC7B57A004829AB /* UserManager.swift */; };
+		E5D07D9C2C01156B00FBE6A8 /* ScheduleTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D07D9B2C01156B00FBE6A8 /* ScheduleTestViewController.swift */; };
 		E5DC65192C07A6CA0033AECB /* StaffManagementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DC65182C07A6CA0033AECB /* StaffManagementView.swift */; };
 		E5DC651B2C07A6E90033AECB /* StaffManagementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DC651A2C07A6E90033AECB /* StaffManagementViewController.swift */; };
 		E5DC651D2C07A7040033AECB /* StaffManagementCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DC651C2C07A7040033AECB /* StaffManagementCollectionViewCell.swift */; };
@@ -114,7 +112,6 @@
 		E5DC65292C07A7850033AECB /* StoreManagementViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DC65282C07A7850033AECB /* StoreManagementViewModel.swift */; };
 		E5DC652B2C07A79B0033AECB /* StoreManagementInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DC652A2C07A79B0033AECB /* StoreManagementInfo.swift */; };
 		E5EF9C5D2C359ED600939868 /* StoreManagementCollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5EF9C5C2C359ED600939868 /* StoreManagementCollectionHeaderView.swift */; };
-		E5D07D9C2C01156B00FBE6A8 /* ScheduleTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D07D9B2C01156B00FBE6A8 /* ScheduleTestViewController.swift */; };
 		F113CB492BA2EFCD00FA6D71 /* MyWorkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F113CB482BA2EFCD00FA6D71 /* MyWorkViewController.swift */; };
 		F113CB4B2BA2F2F600FA6D71 /* MyWorkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F113CB4A2BA2F2F600FA6D71 /* MyWorkView.swift */; };
 		F113CB4D2BA308C800FA6D71 /* MyWorkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F113CB4C2BA308C800FA6D71 /* MyWorkViewModel.swift */; };
@@ -214,16 +211,13 @@
 		A4BA86F22BC411210078FC4B /* CafeNoticeDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeNoticeDto.swift; sourceTree = "<group>"; };
 		A4BA870A2BCCD52E0078FC4B /* HomeMemberScheduleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMemberScheduleCollectionViewCell.swift; sourceTree = "<group>"; };
 		A4BA870C2BCCD5460078FC4B /* MemberScheduleDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberScheduleDto.swift; sourceTree = "<group>"; };
+		E5084B9C2BFB59D8006AF815 /* AttendanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceViewController.swift; sourceTree = "<group>"; };
+		E5084B9E2BFB59EF006AF815 /* AttendanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceView.swift; sourceTree = "<group>"; };
+		E547DF0C2C368F220077D397 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		E547DF0E2C3690300077D397 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		E56922352BFDAD160050C3E1 /* ScheduleReplacementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleReplacementView.swift; sourceTree = "<group>"; };
 		E569223B2BFDAD680050C3E1 /* ScheduleReplacementViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleReplacementViewModel.swift; sourceTree = "<group>"; };
 		E569223D2BFDAD760050C3E1 /* ScheduleReplacementInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleReplacementInfo.swift; sourceTree = "<group>"; };
-		E56EB89D2BEB24EA00DF9DDD /* NoticeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeView.swift; sourceTree = "<group>"; };
-		E56EB89F2BEB253C00DF9DDD /* NoticeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeViewModel.swift; sourceTree = "<group>"; };
-		E56EB8A12BEB255000DF9DDD /* NoticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeViewController.swift; sourceTree = "<group>"; };
-		E56EB8A32BEB255E00DF9DDD /* NoticeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeCollectionViewCell.swift; sourceTree = "<group>"; };
-		E56EB8A52BEB256B00DF9DDD /* NoticeInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeInfo.swift; sourceTree = "<group>"; };
-		E5084B9C2BFB59D8006AF815 /* AttendanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceViewController.swift; sourceTree = "<group>"; };
-		E5084B9E2BFB59EF006AF815 /* AttendanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceView.swift; sourceTree = "<group>"; };
 		E56EB89D2BEB24EA00DF9DDD /* NoticeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeView.swift; sourceTree = "<group>"; };
 		E56EB89F2BEB253C00DF9DDD /* NoticeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeViewModel.swift; sourceTree = "<group>"; };
 		E56EB8A12BEB255000DF9DDD /* NoticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeViewController.swift; sourceTree = "<group>"; };
@@ -234,6 +228,7 @@
 		E58624252BC7B454004829AB /* BaraProviders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaraProviders.swift; sourceTree = "<group>"; };
 		E58624272BC7B47B004829AB /* BaraInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaraInterceptor.swift; sourceTree = "<group>"; };
 		E586242B2BC7B57A004829AB /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		E5D07D9B2C01156B00FBE6A8 /* ScheduleTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleTestViewController.swift; sourceTree = "<group>"; };
 		E5DC65182C07A6CA0033AECB /* StaffManagementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaffManagementView.swift; sourceTree = "<group>"; };
 		E5DC651A2C07A6E90033AECB /* StaffManagementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaffManagementViewController.swift; sourceTree = "<group>"; };
 		E5DC651C2C07A7040033AECB /* StaffManagementCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaffManagementCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -245,7 +240,6 @@
 		E5DC65282C07A7850033AECB /* StoreManagementViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreManagementViewModel.swift; sourceTree = "<group>"; };
 		E5DC652A2C07A79B0033AECB /* StoreManagementInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreManagementInfo.swift; sourceTree = "<group>"; };
 		E5EF9C5C2C359ED600939868 /* StoreManagementCollectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreManagementCollectionHeaderView.swift; sourceTree = "<group>"; };
-		E5D07D9B2C01156B00FBE6A8 /* ScheduleTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleTestViewController.swift; sourceTree = "<group>"; };
 		F113CB482BA2EFCD00FA6D71 /* MyWorkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWorkViewController.swift; sourceTree = "<group>"; };
 		F113CB4A2BA2F2F600FA6D71 /* MyWorkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWorkView.swift; sourceTree = "<group>"; };
 		F113CB4C2BA308C800FA6D71 /* MyWorkViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWorkViewModel.swift; sourceTree = "<group>"; };
@@ -338,6 +332,7 @@
 		833DC7F22B874C030096703B /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				E547DF0B2C368CA70077D397 /* Base */,
 				E5DC650B2C0794380033AECB /* MyPage */,
 				E569222E2BFDAC9A0050C3E1 /* Schedule */,
 				E5084B962BFB597E006AF815 /* Attendance */,
@@ -783,6 +778,48 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		E5084B962BFB597E006AF815 /* Attendance */ = {
+			isa = PBXGroup;
+			children = (
+				E5084B972BFB5990006AF815 /* AttendanceScene */,
+			);
+			path = Attendance;
+			sourceTree = "<group>";
+		};
+		E5084B972BFB5990006AF815 /* AttendanceScene */ = {
+			isa = PBXGroup;
+			children = (
+				E5084B9B2BFB59B6006AF815 /* ViewController */,
+				E5084B9A2BFB59B2006AF815 /* View */,
+			);
+			path = AttendanceScene;
+			sourceTree = "<group>";
+		};
+		E5084B9A2BFB59B2006AF815 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E5084B9E2BFB59EF006AF815 /* AttendanceView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E5084B9B2BFB59B6006AF815 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E5084B9C2BFB59D8006AF815 /* AttendanceViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		E547DF0B2C368CA70077D397 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				E547DF0C2C368F220077D397 /* BaseView.swift */,
+				E547DF0E2C3690300077D397 /* BaseViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		E569222E2BFDAC9A0050C3E1 /* Schedule */ = {
 			isa = PBXGroup;
 			children = (
@@ -832,60 +869,6 @@
 				E569223D2BFDAD760050C3E1 /* ScheduleReplacementInfo.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		A4BA86E82BC3A8C20078FC4B /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				A4BA86E92BC3A9090078FC4B /* MemberMyDto.swift */,
-				A4BA86ED2BC3ADF00078FC4B /* CafeAllDto.swift */,
-				A4BA86F22BC411210078FC4B /* CafeNoticeDto.swift */,
-				F1F17A1A2BF2328800292D91 /* ScheduleMyDto.swift */,
-				A4BA870C2BCCD5460078FC4B /* MemberScheduleDto.swift */,
-			);
-			path = Home;
-			sourceTree = "<group>";
-		};
-		A4BA86EF2BC40E790078FC4B /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-				A4BA86F02BC40ECB0078FC4B /* HomeNoticeCollectionViewCell.swift */,
-				A4BA870A2BCCD52E0078FC4B /* HomeMemberScheduleCollectionViewCell.swift */,
-			);
-			path = Cell;
-			sourceTree = "<group>";
-		};
-		E5084B962BFB597E006AF815 /* Attendance */ = {
-			isa = PBXGroup;
-			children = (
-				E5084B972BFB5990006AF815 /* AttendanceScene */,
-			);
-			path = Attendance;
-			sourceTree = "<group>";
-		};
-		E5084B972BFB5990006AF815 /* AttendanceScene */ = {
-			isa = PBXGroup;
-			children = (
-				E5084B9B2BFB59B6006AF815 /* ViewController */,
-				E5084B9A2BFB59B2006AF815 /* View */,
-			);
-			path = AttendanceScene;
-			sourceTree = "<group>";
-		};
-		E5084B9A2BFB59B2006AF815 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				E5084B9E2BFB59EF006AF815 /* AttendanceView.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		E5084B9B2BFB59B6006AF815 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				E5084B9C2BFB59D8006AF815 /* AttendanceViewController.swift */,
-			);
-			path = ViewController;
 			sourceTree = "<group>";
 		};
 		E56EB8972BEB243500DF9DDD /* NoticeScene */ = {
@@ -1478,6 +1461,7 @@
 				A41289EA2BA04B9D00E3462D /* NameInputViewController.swift in Sources */,
 				F1F179962BCC1EE900292D91 /* RoutineCollectionHeaderView.swift in Sources */,
 				E5D07D9C2C01156B00FBE6A8 /* ScheduleTestViewController.swift in Sources */,
+				E547DF0F2C3690300077D397 /* BaseViewController.swift in Sources */,
 				833DC8012B874D250096703B /* UIView+.swift in Sources */,
 				E56EB8A02BEB253C00DF9DDD /* NoticeViewModel.swift in Sources */,
 				A4667E6D2BB4796100FF3A7D /* LoginViewModel.swift in Sources */,
@@ -1521,6 +1505,7 @@
 				833DC8062B874D9A0096703B /* NSObject+.swift in Sources */,
 				8304715C2B87BBEB005AEEB4 /* UITextField+.swift in Sources */,
 				A43C73F42B90513900B39F21 /* Config.swift in Sources */,
+				E547DF0D2C368F220077D397 /* BaseView.swift in Sources */,
 				F1F17A1B2BF2328800292D91 /* ScheduleMyDto.swift in Sources */,
 				A43C73F82B90515D00B39F21 /* NetworkLoggerPlugin.swift in Sources */,
 				A43B232D2BA6A44600E15CC3 /* StoreInputViewController.swift in Sources */,
