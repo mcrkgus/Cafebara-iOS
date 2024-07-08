@@ -131,4 +131,28 @@ enum I18N {
         static let goToWorkButtonTitle = "출근하기"
         static let goToHomeButtonTitle = "퇴근하기"
     }
+    
+    enum StoreManagement {
+        static let exitStoreTitle = "업장 탈퇴"
+        static let exitStoreExplanation = "탈퇴할 업장을 선택해주세요"
+        static let exitStoreButtonTitle = "탈퇴하기"
+        static let exitAlertExplanation = "선택할 업장을 탈퇴하실 건가요?\n탈퇴한 업장은 초대코드로 다시 추가 가능해요"
+        static let swungDash = "~"
+        static let exitButtonTitle = "할래요"
+        static let cancelButtonTitle = "안할래요"
+        static let exitToastMessage = "업장을 탈퇴했어요"
+        static let exitWarnigToastMessage = "해당 업장은 직원이 남아있어 탈퇴할 수 없어요"
+    }
+    
+    enum StaffManagement {
+        static let staffManageTitle = "직원관리"
+        static let stffManageExplanation = "직업을 관리할 업장을 선택해 주세요"
+        static let selectStaffExplanation = "탈퇴할 직원을 선택해 주세요"
+        static let sendOutButtonTitle = "내보내기"
+        static let sendOutStaffAlertTitle = "직원 탈퇴"
+        static let senfOutStaffAlertExplanation = "선택한 직원을 탈퇴시킬 건가요?\n탈퇴시킨 직원은 초대코드로 다시 추가 가능해요"
+        static let exitButtonTitle = "할래요"
+        static let cancelButtonTitle = "안할래요"
+        static let sendOutToastMessage = "직원을 탈퇴시켰어요"
+    }
 }
